@@ -1,0 +1,30 @@
+CRITICAL - 2025-02-27 01:13:21 --> ErrorException: Undefined array key "cidade_uf"
+[Method: GET, Route: cidades/edit1]
+in APPPATH/Views/cidades/form.php on line 17.
+ 1 APPPATH/Views/cidades/form.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/aluno/Downloads/codeigniter4/app/Views/cidades/form.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Cidades.php(72): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Cidades->edit()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/aluno/Downloads/codeigniter4/public/index.php')
+CRITICAL - 2025-02-27 01:15:42 --> ErrorException: Undefined variable $cidade
+[Method: GET, Route: cidades/new]
+in APPPATH/Views/cidades/form.php on line 13.
+ 1 APPPATH/Views/cidades/form.php(13): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/aluno/Downloads/codeigniter4/app/Views/cidades/form.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Cidades.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Cidades->new()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/aluno/Downloads/codeigniter4/public/index.php')
