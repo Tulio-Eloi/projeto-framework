@@ -37,24 +37,24 @@
                 <input type="text" class="form-control" name="produtos_preco_venda" value="<?= moedaReal($produtos->produtos_preco_venda); ?>"  id="produtos_preco_venda">
             </div>
 
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="produtos_categorias_id" class="form-label"> Categoria </label>
                 <select class="form-control" name="produtos_categorias_id"  id="produtos_categorias_id">
                     
-                    <?php 
-                    for($i=0; $i < count($categorias);$i++){ 
-                        $selected = '';
-                        if($categorias[$i]->categorias_id == $produtos->produtos_categorias_id){
+                    <?php /*
+                    for($i=0; $i < count($cidades);$i++){ 
+                        $ed = 'select';
+                        if($cidades[$i]->cidades['id'] == $produtos->produtos_categorias_id){
                             $selected = 'selected'; 
                         }
                     ?>
-                        <option <?= $selected; ?> value="<?= $categorias[$i]->categorias_id; ?>">
-                            <?= $categorias[$i]->categorias_nome; ?>
+                        <option <?= $selected; ?> value="<?= $cidades[$i]->cidades->id; ?>">
+                            <?= $cidades[$i]->cidades_nome; ?>
                         </option>
-                    <?php } ?>
+                    <?php } */?>
 
                 </select>
-            </div>
+            </div> -->
 
             <input type="hidden" name="produtos_id" value="<?= $produtos->produtos_id; ?>" >
 

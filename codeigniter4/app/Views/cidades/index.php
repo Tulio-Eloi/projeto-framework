@@ -1,51 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title><?php echo $titulo ?></title>
-</head>
-<body>
-    <h1><?= $titulo ?></h1>
+<?php
+    helper('functions');
+    session();
+    // if(isset($_SESSION['login'])){
+    //     $login = $_SESSION['login'];
+    //     print_r($login);
+    //     if($login->usuarios_nivel == 1){
+    
+?>
+<?= $this->extend('Templates_admin') ?>
+<?= $this->section('content') ?>
 
-    <table class="table table-hover">
-        <tr>
-            <th>ID</th>
-            <th>Cidade</th>
-            <th>Estado</th>
-            <th colspan="2">
-                 <a href="<?php echo base_url("cidades/new") ?>">
-                    <i class="bi bi-plus-circle"></i>
-                    Novo
-                </a>
-            </th>
-        </tr>
+    <div class="container">
 
-        <?php 
-        foreach($cidades as $value){
-             ?>
+        <h2 class="border-bottom border-2 border-primary mt-3 mb-4"> <?= $title ?> </h2>
 
-        <tr>
-            <td><?= $value['id'] ?></td>
-            <td><?= $value['cidade'] ?></td>
-            <td><?= $value['uf'] ?></td>
-            <td><a href="<?php echo base_url("cidades/edit".$value['id']) ?>">
-                    <i class="bi bi-pencil-square"></i>
-                    Alterar
-                </a></td>
-            <td><a href="#">
-                    <i class="bi bi-x-circle"></i>
-                    Excluir
-                </a></td>
+        <?php if(isset($msg)){echo $msg;} ?>
 
-        </tr>
-        
-        <?php } ?>
+        <form action="<?= base_url('cidades/search'); ?>" class="d-flex" role="search" method="post">
+            <input class="form-control me-2" name="pesquisar" type="search"
+                placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
 
-    </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">
+                        <a class="btn btn-success"  href="<?= base_url('cidades/new'); ?>">
+                            Novo
+                            <i class="bi bi-plus-circle"></i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                
+                <!-- Aqui vai o laço de repetição -->
+                <?php for($i=0; $i < count($cidades); $i++){ ?>
+                    <tr>
+                        <th scope="row"><?= $cidades[$i]->cidades_id; ?></th>
+                        <td><?= $cidades[$i]->cidades_nome; ?></td>
+                        <td><?= $cidades[$i]->cidades_uf; ?></td>
+                        <td>
+                            <a class="btn btn-primary"  href="<?= base_url('cidades/edit/'.$cidades[$i]->cidades_id); ?>">
+                                Editar
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <a class="btn btn-danger"  href="<?= base_url('cidades/delete/'.$cidades[$i]->cidades_id); ?>">
+                                Excluir
+                                <i class="bi bi-x-circle"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <?php } ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+            </tbody>
+        </table>
+
+    </div>
+<?= $this->endSection() ?>
+
+<?php 
+    //     }else{
+
+    //         $data['msg'] = msg("Sem permissão de acesso!","danger");
+    //         echo view('login',$data);
+    //     }
+    // }else{
+
+    //     $data['msg'] = msg("O usuário não está logado!","danger");
+    //     echo view('login',$data);
+    // }
+
+?>

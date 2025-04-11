@@ -42,7 +42,6 @@ class Login extends BaseController
                     'usuarios_sobrenome' => $this->data['usuarios'][0]->usuarios_sobrenome,
                     'usuarios_cpf' => $this->data['usuarios'][0]->usuarios_cpf,
                     'usuarios_email' => $this->data['usuarios'][0]->usuarios_email,
-                    'usuarios_hash' => md5(123456),
                     'logged_in' => TRUE
                 ];
                 $this->session->set('login', $infoSession);

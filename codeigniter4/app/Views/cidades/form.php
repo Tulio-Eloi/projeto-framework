@@ -1,25 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$titulo ?></title>
-</head>
-<body>
-    <h1><?php echo $titulo?></h1>
-    <form action="<?php echo base_url("cidades/create") ?>" method="post">
-        <div>
-            <label for="cidades_nomes"> Cidade</label>
-            <input type="text" name="cidades_nome" id="cidades_nome" value = "<?=$cidade['cidade'] ?>" required>
-        </div>
-        <div>
-            <label for="cidades_uf"> Estado</label>
-            <input type="text" name="cidades_uf" id="cidades_uf" value = "<?=$cidade['uf']?>" required>
-        </div>
-        <input type="hidden" name="cidades_id" value="<?=$cidade['id']?>">
-        <div>
-            <button type="submit" >cadastrar</button>
-        </div>
-    </form>
-</body>
-</html>
+
+<?php
+    helper('functions');
+    session();
+    // if(isset($_SESSION['login'])){
+    //     $login = $_SESSION['login'];
+    //     print_r($login);
+    //     if($login->usuarios_nivel == 1){
+    
+?>
+<?= $this->extend('Templates_admin') ?>
+<?= $this->section('content') ?>
+
+
+    <div class="container pt-4 pb-5 bg-light">
+        <h2 class="border-bottom border-2 border-primary">
+            <?= ucfirst($form).' '.$title ?>
+        </h2>
+
+        <form action="<?= base_url('cidades/'.$op); ?>" method="post">
+            <div class="mb-3">
+                <label for="cidades_nome" class="form-label"> Cidade </label>
+                <input type="text" class="form-control" name="cidades_nome" value="<?= $cidades->cidades_nome; ?>"  id="cidades_nome">
+            </div>
+
+            <div class="mb-3">
+                <label for="cidades_uf" class="form-label"> Estado </label>
+                <input type="text" class="form-control" name="cidades_uf" value="<?= $cidades->cidades_uf; ?>"  id="cidades_uf">
+            </div>
+
+
+            <input type="hidden" name="cidades_id" value="<?= $cidades->cidades_id; ?>" >
+
+            <div class="mb-3">
+                <button class="btn btn-success" type="submit"> <?= ucfirst($form)  ?> <i class="bi bi-floppy"></i></button>
+            </div>
+        
+        </form>
+
+    </div>
+
+<?= $this->endSection() ?>
+
+<?php 
+    //     }else{
+
+    //         $data['msg'] = msg("Sem permissão de acesso!","danger");
+    //         echo view('login',$data);
+    //     }
+    // }else{
+
+    //     $data['msg'] = msg("O usuário não está logado!","danger");
+    //     echo view('login',$data);
+    // }
+
+?>

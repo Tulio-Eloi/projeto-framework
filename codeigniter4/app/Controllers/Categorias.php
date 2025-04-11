@@ -1,16 +1,21 @@
- <?php
+<?php
 
 namespace App\Controllers;
 use App\Models\Categorias as Categorias_model;
 
 class Categorias extends BaseController
-{
-    private $categorias;
+{   
+    // variavel que recebe a instancia do model
+    private $categorias; 
+    
+    // metodo construtor
     public function __construct(){
-        $this->categorias = new Categorias_model();
+        $this->categorias = new Categorias_model(); // instancia do model
         $data['title'] = 'Categorias';
-        helper('functions');
+        helper('functions'); // chama os metodos auxiliares
     }
+
+    //
     public function index(): string
     {
         $data['title'] = 'Categorias';
@@ -29,6 +34,8 @@ class Categorias extends BaseController
         ];
         return view('categorias/form',$data);
     }
+
+    
     public function create()
     {
 
