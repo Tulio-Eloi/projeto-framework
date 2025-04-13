@@ -1,77 +1,112 @@
 <?php
     helper('functions');
     session();
-    // if(isset($_SESSION['login'])){
-    //     $login = $_SESSION['login'];
-    //     print_r($login);
-    //     if($login->usuarios_nivel == 1){
+
     
 ?>
-
-<div class="container pt-4 pb-5 bg-light">
-        <h2 class="border-bottom border-2 border-primary">
-            <?= ucfirst($form).' '.$title ?>
-        </h2>
-
-        <form action="<?= base_url('endereco/'.$op); ?>" method="post">
-            <div class="mb-3">
-                <label for="endereco_rua" class="form-label"> Rua </label>
-                <input type="text" class="form-control" name="endereco_rua" value="<?= $endereco->endereco_rua; ?>"  id="endereco_rua">
-            </div>
-
-            <div class="mb-3">
-                <label for="endereco_numero" class="form-label"> Descrição </label>
-                <input type="text" class="form-control" name="endereco_numero" value="<?= $endereco->endereco_numero; ?>"  id="endereco_numero">
-            </div>
-
-            <div class="mb-3">
-                <label for="endereco_complemento" class="form-label"> Preço de Custo </label>
-                <input type="text" class="form-control" name="endereco_complemento" value="<?= moedaReal($endereco->endereco_complemento); ?>"  id="endereco_complemento">
-            </div>
-
-            <div class="mb-3">
-                <label for="endereco_cep" class="form-label"> Preço de Venda </label>
-                <input type="text" class="form-control" name="endereco_cep" value="<?= moedaReal($endereco->endereco_cep); ?>"  id="endereco_cep">
-            </div>
-
-            <div class="mb-3">
-                <label for="endereco_categorias_id" class="form-label"> Categoria </label>
-                <select class="form-control" name="endereco_categorias_id"  id="endereco_categorias_id">
-                    
-
-                <select class="form-control" name="endereco_status"  id="endereco_status">
-                    
-                    <?php 
-                    for($i=0; $i < count($cidade);$i++){ 
-                        $ed = 'select';
-                        if($categorias[$i]->categorias_id == $produtos->produtos_categorias_id){
-                            $selected = 'selected'; 
-                        }
-                    ?>
-                        <option <?= $selected; ?> value="<?= $categorias[$i]->categorias_id; ?>">
-                            <?= $categorias[$i]->categorias_nome; ?>
-                        </option>
-                    <?php } ?>
-
-                </select>
-            </div>
-
-            <input type="hidden" name="endereco_id" value="<?= $endereco->endereco_id; ?>" >
-
-            <div class="mb-3">
-                <button class="btn btn-success" type="submit"> <?= ucfirst($form)  ?> <i class="bi bi-floppy"></i></button>
-            </div>
-        
-        </form>
-
-    </div>
-
-
-
-
-
-
-
-
 <?= $this->extend('Templates_admin') ?>
 <?= $this->section('content') ?>
+
+
+<div class="container">
+
+<h2 class="border-bottom border-2 border-primary mt-3 mb-4"> <?= $title ?> </h2>
+
+<?php if(isset($msg)){echo $msg;} ?>
+
+<form action="<?= base_url('endereco/search'); ?>" class="d-flex" role="search" method="post">
+    <input class="form-control me-2" name="pesquisar" type="search"
+        placeholder="Pesquisar" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">
+    <i class="bi bi-search"></i>
+    </button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Rua</th>
+            <th scope="col">Complemento</th>
+            <th scope="col">numero</th>
+            <th scope="col">cep</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">status</th>
+            <th scope="col">
+                <a class="btn btn-success"  href="<?= base_url('endereco/new'); ?>">
+                    Novo
+                    <i class="bi bi-plus-circle"></i>
+                </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        
+        <!-- Aqui vai o laço de repetição -->
+        <?php foreach($endereco as $enderecos){ ?>
+            <?php         $login = session()->get('login');
+?>
+            <?php if($enderecos['endereco_usuario_id'] == $login->usuarios_id){ ?>
+                <?php if($enderecos['endereco_status'] == 1){ ?>
+
+            <tr>
+                <th scope="row"><?=$enderecos['endereco_rua']; ?></th>
+                <td><?= $enderecos['endereco_complemento']; ?></td>
+                <td><?= $enderecos['endereco_numero']; ?></td>
+                <td><?= $enderecos['endereco_cep']; ?></td>
+                <td><?= $enderecos['endereco_cidade_id']; ?></td>
+                <td><?= "ativo" ?></td>
+
+                <td>
+                    <a class="btn btn-primary"  href="<?= base_url('enderecos/editar/'.$enderecos['endereco_id']); ?>">
+                        Editar
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a class="btn btn-danger"  href="<?= base_url('enderecos/deletar/'.$enderecos['endereco_id']); ?>">
+                        Excluir
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </td>
+            </tr>
+            <?php }else{?>
+                 <tr>
+                <th scope="row"><?=$enderecos['endereco_rua']; ?></th>
+                <td><?= $enderecos['endereco_complemento']; ?></td>
+                <td><?= $enderecos['endereco_numero']; ?></td>
+                <td><?= $enderecos['endereco_cep']; ?></td>
+                <td><?= $enderecos['endereco_cidade_id']; ?></td>
+                <td><?= "inativo" ?></td>
+
+                <td>
+                    <a class="btn btn-primary"  href="<?= base_url('enderecos/editar/'.$enderecos['endereco_id']); ?>">
+                        Editar
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a class="btn btn-danger"  href="<?= base_url('enderecos/deletar/'.$enderecos['endereco_id']); ?>">
+                        Excluir
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </td>
+            </tr>?>
+                    <?php }?>
+
+
+            <?php }else{?>
+                <?php echo "Nenhum endereço cadastrado"?>
+
+                <?php }?>
+
+        <?php } ?>
+
+    </tbody>
+</table>
+
+</div>
+           
+        </p>
+        </div>
+
+
+
+
+<?= $this->endSection() ?>
+

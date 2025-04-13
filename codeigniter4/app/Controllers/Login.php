@@ -44,6 +44,7 @@ class Login extends BaseController
                     'usuarios_email' => $this->data['usuarios'][0]->usuarios_email,
                     'logged_in' => TRUE
                 ];
+                
                 $this->session->set('login', $infoSession);
 
                 if($this->data['usuarios'][0]->usuarios_nivel == 0){
@@ -71,7 +72,7 @@ class Login extends BaseController
     }
 
     public function desconectado(){
-        $this->data = msg("O usuário não está logado!","danger");
+        $this->data['msg'] = msg("O usuário não está logado!","danger");
         return view('login',$this->data);
     }
 

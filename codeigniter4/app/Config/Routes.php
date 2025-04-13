@@ -63,4 +63,12 @@ $routes->get('/usuarios/edit_senha', 'Usuarios::edit_senha');
 $routes->post('/usuarios/salvar_senha', 'Usuarios::salvar_senha');
 
 $routes->get('/usuarios/delete/(:any)', 'Usuarios::delete/$1');
-$routes->get('/endereco', 'Endereco::index');
+$routes->get('/enderecos', 'Endereco::index');
+
+$routes->get('/endereco/new', 'Endereco::new');
+$routes->post('/enderecos/create', 'Endereco::create');
+$routes->get('/enderecos/deletar/(:any)', 'Endereco::deletar/$1');// esse (:any) foi feito para passar parametros pela url, e o $1 e para receber.
+$routes->get('/enderecos/editar/(:any)', 'Endereco::edit/$1');// esse (:any) foi feito para passar parametros pela url, e o $1 e para receber.
+$routes->post('/enderecos/update', 'Endereco::update');
+$routes->post('/endereco/search', 'Endereco::search');
+

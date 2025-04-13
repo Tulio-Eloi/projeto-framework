@@ -6,14 +6,22 @@ use CodeIgniter\Model;
 
 class Endereco extends Model
 {
-    protected $table            = 'enderecos';
-    protected $primaryKey       = 'id';
+    protected $table            = 'endereco';
+    protected $primaryKey       = 'endereco_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['endereco_id, endereco_rua, endereco_numero, endereco_complemento, endereco_cep,endereco_cidade_id, endereco_status, endereco_usuario_id'];
-
+    protected $allowedFields = [
+        'endereco_id',
+        'endereco_rua',
+        'endereco_numero',
+        'endereco_complemento',
+        'endereco_cep',
+        'endereco_cidade_id',
+        'endereco_status',
+        'endereco_usuario_id'
+    ];
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
 

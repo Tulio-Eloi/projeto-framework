@@ -25,9 +25,7 @@
         <p></p>
 
         <p>
-            <?php
-                print_r($login); 
-            ?>
+            
         </p>
         </div>
 
