@@ -102,7 +102,7 @@ class Endereco extends BaseController
         //var_dump( $data['endereco']);
         $data['form'] = 'enderecos';
         $data['op'] = 'update';
-        $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
+        $data['cidades']= $this->cidade->findAll();
         $session = session();
 
         $session->set([
