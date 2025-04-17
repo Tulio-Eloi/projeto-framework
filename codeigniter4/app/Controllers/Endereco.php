@@ -27,10 +27,10 @@ class Endereco extends BaseController
         //$data['cidade'] = $this->cidades->findAll();
      
          $data['title'] = 'Categorias';
-        $data['endereco'] = $this->endereco->findAll();
-        $data['cidade'] = $this->cidade->findAll();
-
-        
+        //$data['endereco'] = $this->endereco->findAll();
+  
+        $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
+       // var_dump( $data['cidade']);
         return view('endereco/index', $data);
     }
     public function new()
@@ -75,7 +75,7 @@ class Endereco extends BaseController
         
         $data['msg'] = msg('Cadastrado com Sucesso!','success');
         $data['endereco'] = $this->endereco->findAll();
-
+        $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
         //var_dump($data['endereco']);
         $data['title'] = 'Endereco';
        return view('endereco/index',$data);
@@ -87,7 +87,8 @@ class Endereco extends BaseController
 
         $this->endereco->where('endereco_id', (int) $id)->delete();
         $data['msg'] = msg('Deletado com Sucesso!','success');
-        $data['endereco'] = $this->endereco->findAll();
+        $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
+
         $data['title'] = 'Endereço';
         
         return view('endereco/index',$data);
@@ -101,7 +102,7 @@ class Endereco extends BaseController
         //var_dump( $data['endereco']);
         $data['form'] = 'enderecos';
         $data['op'] = 'update';
-        $data['cidades']= $this->cidade->findAll() ;
+        $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
         $session = session();
 
         $session->set([
@@ -132,7 +133,7 @@ class Endereco extends BaseController
         //var_dump($id);
         $this->endereco->update($id, $dataForm);
         $data['msg'] = msg('Alterado com Sucesso!','success');
-        $data['endereco'] = $this->endereco->findAll();
+        $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
         $data['title'] = 'Endereco';
         return view('endereco/index',$data);
     }

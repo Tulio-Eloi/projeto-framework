@@ -53,7 +53,7 @@
                 <td><?= $enderecos['endereco_complemento']; ?></td>
                 <td><?= $enderecos['endereco_numero']; ?></td>
                 <td><?= $enderecos['endereco_cep']; ?></td>
-                <td><?= $enderecos['endereco_cidade_id']; ?></td>
+                <td><?= $enderecos['cidades_nome'];?></td>
                 <td><?= "ativo" ?></td>
 
                 <td>

@@ -1,0 +1,1983 @@
+DEBUG - 2025-04-17 20:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:27:20 --> ErrorException: Attempt to read property "usuarios_id" on null
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 48.
+ 1 APPPATH/Views/endereco/index.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:31:03 --> ErrorException: Undefined variable $cidade
+[Method: POST, Route: enderecos/create/]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(81): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->create()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:31:20 --> ErrorException: Undefined variable $cidade
+[Method: POST, Route: enderecos/create/]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(81): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->create()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:31:41 --> ErrorException: Undefined array key "nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:31:41 --> ErrorException: Undefined array key "nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:31:51 --> ErrorException: Attempt to read property "nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:31:55 --> ErrorException: Attempt to read property "nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:32:20 --> ErrorException: Undefined variable $cidade
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:32:23 --> ErrorException: Undefined variable $cidade
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:13 --> ErrorException: Attempt to read property "cidade_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:24 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:25 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:25 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:25 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:25 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:26 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:26 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:26 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:26 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:27 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:27 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:27 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:27 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:27 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:27 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:28 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:29 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:29 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:29 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:29 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:33 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:34 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:34 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:34 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:44 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:45 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:33:45 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+ERROR - 2025-04-17 20:35:41 --> mysqli_sql_exception: Unknown column 'cidade_id' in 'on clause' in /home/eric/projeto-framework/codeigniter4/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/eric/projeto-framework/codeigniter4/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/eric/projeto-framework/codeigniter4/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/eric/projeto-framework/codeigniter4/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/eric/projeto-framework/codeigniter4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/eric/projeto-framework/codeigniter4/system/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/eric/projeto-framework/codeigniter4/system/BaseModel.php(609): CodeIgniter\Model->doFind()
+#6 /home/eric/projeto-framework/codeigniter4/app/Controllers/Endereco.php(32): CodeIgniter\BaseModel->find()
+#7 /home/eric/projeto-framework/codeigniter4/system/CodeIgniter.php(933): App\Controllers\Endereco->index()
+#8 /home/eric/projeto-framework/codeigniter4/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/eric/projeto-framework/codeigniter4/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/eric/projeto-framework/codeigniter4/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 /home/eric/projeto-framework/codeigniter4/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/eric/projeto-framework/codeigniter4/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/eric/projeto-framework/codeigniter4/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2025-04-17 20:35:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'cidade_id' in 'on clause'
+[Method: GET, Route: enderecos]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(609): CodeIgniter\Model->doFind()
+ 4 APPPATH/Controllers/Endereco.php(32): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:35:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'cidade_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(609): CodeIgniter\Model->doFind()
+ 6 APPPATH/Controllers/Endereco.php(32): CodeIgniter\BaseModel->find()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:35:41 --> [Caused by] mysqli_sql_exception: Unknown column 'cidade_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(609): CodeIgniter\Model->doFind()
+ 7 APPPATH/Controllers/Endereco.php(32): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:38 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:56 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:36:56 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:00 --> ErrorException: Undefined array key "cidade_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:10 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:10 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:11 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:11 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:11 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:11 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:11 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:12 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:12 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:12 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:12 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:12 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:12 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:13 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:13 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:37:19 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:39:01 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:39:01 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:39:01 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:39:01 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:39:01 --> ErrorException: Attempt to read property "cidades_nome" on array
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:25 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:26 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:26 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:26 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:26 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:27 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:27 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:27 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:27 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:27 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:27 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:28 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:28 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:28 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:28 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:28 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:53 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:53 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:53 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:54 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:54 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:54 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:54 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:54 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:54 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:40:55 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:04 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:04 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:04 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:05 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:05 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:05 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:41:05 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:44:53 --> ErrorException: Undefined array key "cidades_nome"
+[Method: GET, Route: enderecos]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(34): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:23 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:24 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:24 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:24 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:24 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:25 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+CRITICAL - 2025-04-17 20:45:25 --> ErrorException: Undefined array key "cidade"
+[Method: GET, Route: enderecos]
+in APPPATH/Controllers/Endereco.php on line 33.
+ 1 APPPATH/Controllers/Endereco.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-17 20:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-17 20:45:38 --> ErrorException: Undefined array key "cidades_nome"
+[Method: POST, Route: enderecos/create/]
+in APPPATH/Views/endereco/index.php on line 56.
+ 1 APPPATH/Views/endereco/index.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/eric/projeto-framework/codeigniter4/app/Views/endereco/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Endereco.php(81): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Endereco->create()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eric/projeto-framework/codeigniter4/public/index.php')
+DEBUG - 2025-04-17 20:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
