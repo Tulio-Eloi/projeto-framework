@@ -1,13 +1,21 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Usuarios as Usuarios_model;
+use App\Models\Usuarios_model as Usuarios_model;
+use App\Models\Cliente as Cliente_model;
+use App\Models\Nivel as Nivel;
+
 
 class Usuarios extends BaseController
 {
     private $usuarios;
+    private $cliente;
+    private $nivel;
+
     public function __construct(){
         $this->usuarios = new Usuarios_model();
+        $this->cliente = new Cliente_model();
+        $this->nivel = new Nivel();
         $data['title'] = 'Usuarios';
         helper('functions');
     }
@@ -18,72 +26,70 @@ class Usuarios extends BaseController
         return view('usuarios/index',$data);
     }
 
-    public function new(): string
+    public function new()
     {
         $data['title'] = 'Usuarios';
         $data['op'] = 'create';
         $data['form'] = 'cadastrar';
         $data['usuarios'] = (object) [
             'usuarios_nome'=> '',
-            'usuarios_sobrenome'=> '',
-            'usuarios_email'=> '',
-            'usuarios_cpf'=> '',
+           'usuarios_email'=> '',
             'usuarios_senha'=> '',
-            'usuarios_fone'=> '',
-            'usuarios_data_nasc'=> '',
             'usuarios_id'=> ''
         ];
-        return view('usuarios/form',$data);
+
+        $data['cliente'] = (object) [
+            'id_clientes' => '',
+            'nome_cliente' => '',
+            'sobrenome_cliente' => '',
+            'cpf_cliente' => '',
+            'data_nasc_cliente' => '', 
+            'fone_cliente' => '', 
+            'nivel_id_cliente' => '', 
+            'usuario_cliente' => ''
+
+        ];   
+        $data['nivel'] = $this->nivel->findAll();
+        echo "<br> <br> <br>";
+        var_dump( $data['nivel']);
+       return view('usuarios/form',$data);
     }
     public function create()
     {
-
-        // Checks whether the submitted data passed the validation rules.
-        if(!$this->validate([
-            'usuarios_nome' => 'required|max_length[255]|min_length[3]',
-            'usuarios_sobrenome' => 'required',
-            'usuarios_cpf' => 'required',
-            'usuarios_email' => 'required',
-            'usuarios_senha' => 'required',
-            'usuarios_fone' => 'required',
-            'usuarios_data_nasc' => 'required',
-        ])) {
-            
-            // The validation fails, so returns the form.
-            $data['usuarios'] = (object) [
-                'usuarios_id' => '',
-                'usuarios_nome' => $_REQUEST['usuarios_nome'],
-                'usuarios_sobrenome' => $_REQUEST['usuarios_sobrenome'],
-                'usuarios_email' => $_REQUEST['usuarios_email'],
-                'usuarios_cpf' => moedaDolar($_REQUEST['usuarios_cpf']),
-                'usuarios_data_nasc' => moedaDolar($_REQUEST['usuarios_data_nasc']),
-                'usuarios_senha' => $_REQUEST['usuarios_senha'],
-                'usuarios_fone' => $_REQUEST['usuarios_fone']
-            ];
-            
-            $data['title'] = 'Usuarios';
-            $data['form'] = 'Cadastrar';
-            $data['op'] = 'create';
-            return view('usuarios/form',$data);
-        }
-
-
-        $this->usuarios->save([
+    
+        $data['usuarios'] = (object) [
+            'usuarios_id' => '',
             'usuarios_nome' => $_REQUEST['usuarios_nome'],
-            'usuarios_sobrenome' => $_REQUEST['usuarios_sobrenome'],
             'usuarios_email' => $_REQUEST['usuarios_email'],
-            'usuarios_cpf' => $_REQUEST['usuarios_cpf'],
-            'usuarios_data_nasc' => $_REQUEST['usuarios_data_nasc'],
             'usuarios_senha' => md5($_REQUEST['usuarios_senha']),
-            'usuarios_fone' => $_REQUEST['usuarios_fone'],
-            'usuarios_nivel' => 0
-        ]);
+            'usuarios_data_cadastro' => date('Y-m-d'), 
+        ];         
+        $id = $this->usuarios->insert($data['usuarios'], true);
+        echo "<br> <br> <br>";
+        
+
+       $data['cliente'] = (object) [
+            'id_clientes' => '',
+            'nome_cliente' => $_REQUEST['nome_cliente'],
+            'sobrenome_cliente' => $_REQUEST['sobrenome_cliente'],
+            'cpf_cliente' => $_REQUEST['cpf_cliente'],
+            'data_nasc_cliente' => date('Y-m-d',strtotime($_REQUEST['data_nasc_cliente'])), 
+            'fone_cliente' => $_REQUEST['fone_cliente'], 
+            'nivel_id_cliente' => $_REQUEST['nivel'], 
+            'usuario_cliente' => $id
+
+        ];   
+       $datas = date('Y-m-d',strtotime($_REQUEST['data_nasc_cliente']));
+       echo($datas);
+        $this->cliente->insert($data['cliente']);
         
         $data['msg'] = msg('Cadastrado com Sucesso!','success');
         $data['usuarios'] = $this->usuarios->findAll();
+        $data['cliente'] = $this->cliente->findAll();
         $data['title'] = 'Usuarios';
-        return view('usuarios/index',$data);
-
+       return view('usuarios/index',$data);
+     
+        
     }
 
     public function delete($id)

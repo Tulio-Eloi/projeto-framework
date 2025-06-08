@@ -28,7 +28,6 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
                 <th scope="col">
                     <a class="btn btn-success" href="<?= base_url('usuarios/new'); ?>">
                         Novo
@@ -43,8 +42,7 @@
             <?php for($i=0; $i < count($usuarios); $i++){ ?>
             <tr>
                 <th scope="row"><?= $usuarios[$i]->usuarios_id; ?></th>
-                <td><?= $usuarios[$i]->usuarios_nome.' '.$usuarios[$i]->usuarios_sobrenome; ?></td>
-                <td><?= $usuarios[$i]->usuarios_cpf; ?></td>
+                <td><?= $usuarios[$i]->usuarios_nome?></td>
                 <td>
                     <a class="btn btn-primary" href="<?= base_url('usuarios/edit/'.$usuarios[$i]->usuarios_id); ?>">
                         Editar
