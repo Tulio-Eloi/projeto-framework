@@ -2,8 +2,8 @@
 -- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: mysql:3309
--- Tempo de geração: 10/04/2025 às 01:30
+-- Host: mysql:3306
+-- Tempo de geração: 09/06/2025 às 01:51
 -- Versão do servidor: 8.0.41
 -- Versão do PHP: 8.2.27
 
@@ -61,6 +61,23 @@ INSERT INTO `cidades` (`cidades_id`, `cidades_nome`, `cidades_uf`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id_clientes` int NOT NULL,
+  `nome_cliente` varchar(20) NOT NULL,
+  `sobrenome_cliente` varchar(50) NOT NULL,
+  `cpf_cliente` varchar(11) NOT NULL,
+  `data_nasc_cliente` date NOT NULL,
+  `fone_cliente` varchar(11) NOT NULL,
+  `nivel_id_cliente` int NOT NULL,
+  `usuario_cliente` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `endereco`
 --
 
@@ -74,6 +91,26 @@ CREATE TABLE `endereco` (
   `endereco_status` int NOT NULL,
   `endereco_usuario_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `nivel`
+--
+
+CREATE TABLE `nivel` (
+  `id_nivel` int NOT NULL,
+  `nivel` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `nivel`
+--
+
+INSERT INTO `nivel` (`id_nivel`, `nivel`) VALUES
+(1, 'Admin'),
+(2, 'Funcionario'),
+(3, 'Cliente');
 
 -- --------------------------------------------------------
 
@@ -99,22 +136,10 @@ CREATE TABLE `produtos` (
 CREATE TABLE `usuarios` (
   `usuarios_id` int NOT NULL,
   `usuarios_nome` varchar(255) NOT NULL,
-  `usuarios_sobrenome` varchar(255) NOT NULL,
   `usuarios_email` varchar(255) NOT NULL,
-  `usuarios_cpf` varchar(14) NOT NULL,
-  `usuarios_data_nasc` date NOT NULL,
-  `usuarios_nivel` int NOT NULL,
-  `usuarios_fone` varchar(15) NOT NULL,
   `usuarios_senha` varchar(32) NOT NULL,
-  `usuarios_data_cadastro` int NOT NULL
+  `usuarios_data_cadastro` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Despejando dados para a tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`usuarios_id`, `usuarios_nome`, `usuarios_sobrenome`, `usuarios_email`, `usuarios_cpf`, `usuarios_data_nasc`, `usuarios_nivel`, `usuarios_fone`, `usuarios_senha`, `usuarios_data_cadastro`) VALUES
-(1, 'teste', 'teste', 'teste@gmail.com', '999999999', '2003-09-05', 0, '9999999999', 'e10adc3949ba59abbe56e057f20f883e', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -133,12 +158,26 @@ ALTER TABLE `cidades`
   ADD PRIMARY KEY (`cidades_id`);
 
 --
+-- Índices de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id_clientes`),
+  ADD KEY `usuario_cliente` (`usuario_cliente`),
+  ADD KEY `nivel_id_cliente` (`nivel_id_cliente`);
+
+--
 -- Índices de tabela `endereco`
 --
 ALTER TABLE `endereco`
   ADD PRIMARY KEY (`endereco_id`),
   ADD KEY `endereco_cidade_id` (`endereco_cidade_id`),
   ADD KEY `endereco_usuario_id` (`endereco_usuario_id`);
+
+--
+-- Índices de tabela `nivel`
+--
+ALTER TABLE `nivel`
+  ADD PRIMARY KEY (`id_nivel`);
 
 --
 -- Índices de tabela `produtos`
@@ -170,10 +209,22 @@ ALTER TABLE `cidades`
   MODIFY `cidades_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id_clientes` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
 -- AUTO_INCREMENT de tabela `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `endereco_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `endereco_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `nivel`
+--
+ALTER TABLE `nivel`
+  MODIFY `id_nivel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
@@ -185,11 +236,18 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- Restrições para tabelas despejadas
 --
+
+--
+-- Restrições para tabelas `clientes`
+--
+ALTER TABLE `clientes`
+  ADD CONSTRAINT `nivel_id_cliente` FOREIGN KEY (`nivel_id_cliente`) REFERENCES `nivel` (`id_nivel`),
+  ADD CONSTRAINT `usuario_cliente` FOREIGN KEY (`usuario_cliente`) REFERENCES `usuarios` (`usuarios_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Restrições para tabelas `endereco`
