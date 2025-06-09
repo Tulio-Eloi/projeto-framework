@@ -57,19 +57,21 @@
                 <label for="fone_cliente" class="form-label"> Telefone </label>
                 <input type="text" class="form-control" name="fone_cliente" value="<?= $cliente->fone_cliente; ?>"  id="fone_cliente">
             </div>
-            
             <div class="mb-3">
                 <label for="nivel">Nível</label>
-                <select name="nivel">
-                    <?php foreach ($nivel as $n): ?>
-                        <option value="<?= esc($n['id_nivel']) ?>"><?= esc($n['nivel']) ?></option>
+                <select name="nivel" class="form-control" required>
+                    <?php foreach ($niveis as $n): ?>
+                        <option value="<?= esc($n->id_nivel) ?>"
+                            <?= isset($cliente) && $cliente->nivel_id_cliente == $n->id_nivel ? 'selected' : '' ?>>
+                            <?= esc($n->nivel) ?>
+                        </option>
                     <?php endforeach; ?>
                 </select>
             </div>
            
 
             <input type="hidden" name="usuarios_id" value="<?= $usuarios->usuarios_id; ?>" >
-
+            <input type="hidden" name="id_clientes" value="<?= $cliente->id_clientes; ?>" >
             <div class="mb-3">
                 <button class="btn btn-success" type="submit"> <?= ucfirst($form)  ?> <i class="bi bi-floppy"></i></button>
             </div>

@@ -9,7 +9,7 @@ class Nivel extends Model
     protected $table            = 'nivel';
     protected $primaryKey       = 'id_nivel';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = ['nivel'];

@@ -79,8 +79,7 @@ class Usuarios extends BaseController
             'usuario_cliente' => $id
 
         ];   
-       $datas = date('Y-m-d',strtotime($_REQUEST['data_nasc_cliente']));
-       echo($datas);
+
         $this->cliente->insert($data['cliente']);
         
         $data['msg'] = msg('Cadastrado com Sucesso!','success');
@@ -94,6 +93,7 @@ class Usuarios extends BaseController
 
     public function delete($id)
     {
+        $this->cliente->where('usuario_cliente', (int) $id)->delete();
         $this->usuarios->where('usuarios_id', (int) $id)->delete();
         $data['msg'] = msg('Deletado com Sucesso!','success');
         $data['usuarios'] = $this->usuarios->findAll();
@@ -104,6 +104,15 @@ class Usuarios extends BaseController
     public function edit($id)
     {
         $data['usuarios'] = $this->usuarios->find(['usuarios_id' => (int) $id])[0];
+        $usuarios =  $data['usuarios'];
+        
+        $data['cliente'] = $this->cliente
+        ->where('usuario_cliente', (int) $usuarios->usuarios_id)
+        ->first();
+
+
+        $data['niveis'] = $this->nivel->findAll();
+  
         $data['title'] = 'Usuarios';
         $data['form'] = 'Alterar';
         $data['op'] = 'update';
@@ -113,17 +122,23 @@ class Usuarios extends BaseController
     public function update()
     {
         $dataForm = [
-            'usuarios_id' => $_REQUEST['usuarios_id'],
+            'usuarios_id' => '',
             'usuarios_nome' => $_REQUEST['usuarios_nome'],
-            'usuarios_sobrenome' => $_REQUEST['usuarios_sobrenome'],
             'usuarios_email' => $_REQUEST['usuarios_email'],
-            'usuarios_cpf' => $_REQUEST['usuarios_cpf'],
-            'usuarios_data_nasc' => $_REQUEST['usuarios_data_nasc'],
-            'usuarios_fone' => $_REQUEST['usuarios_fone'],
-            'usuarios_nivel' => 0
         ];
+        $clientesFrom = [
+            'id_clientes' => '',
+            'nome_cliente' => $_REQUEST['nome_cliente'],
+            'sobrenome_cliente' => $_REQUEST['sobrenome_cliente'],
+            'cpf_cliente' => $_REQUEST['cpf_cliente'],
+            'data_nasc_cliente' => date('Y-m-d',strtotime($_REQUEST['data_nasc_cliente'])), 
+            'fone_cliente' => $_REQUEST['fone_cliente'], 
+            'nivel_id_cliente' => $_REQUEST['nivel'], 
+            'usuario_cliente' => $_REQUEST['usuarios_id']
 
+        ];  
         $this->usuarios->update($_REQUEST['usuarios_id'], $dataForm);
+        $this->cliente->update($_REQUEST['id_clientes'],$clientesFrom);
         $data['msg'] = msg('Alterado com Sucesso!','success');
         $data['usuarios'] = $this->usuarios->findAll();
         $data['title'] = 'Usuarios';
@@ -133,8 +148,10 @@ class Usuarios extends BaseController
     public function search()
     {
         //$data['usuarios'] = $this->usuarios->like('usuarios_nome', $_REQUEST['pesquisar'])->find();
-        $data['usuarios'] = $this->usuarios->like('usuarios_nome', $_REQUEST['pesquisar'])->orlike('usuarios_cpf', $_REQUEST['pesquisar'])->find();
-        $total = count($data['usuarios']);
+       // $data['usuarios'] = $this->usuarios->like('usuarios_nome', $_REQUEST['pesquisar'])->orlike('usuarios_cpf', $_REQUEST['pesquisar'])->find();
+       $data['usuarios'] = $this->usuarios->like('usuarios_nome', $_REQUEST['pesquisar'])->orlike('usuarios_id', $_REQUEST['pesquisar'])->find();
+        
+       $total = count($data['usuarios']);
         $data['msg'] = msg("Dados Encontrados: {$total}",'success');
         $data['title'] = 'Usuarios';
         return view('usuarios/index',$data);
