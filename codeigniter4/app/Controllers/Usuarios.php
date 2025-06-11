@@ -50,8 +50,7 @@ class Usuarios extends BaseController
 
         ];   
         $data['nivel'] = $this->nivel->findAll();
-        echo "<br> <br> <br>";
-        var_dump( $data['nivel']);
+      
        return view('usuarios/form',$data);
     }
     public function create()
