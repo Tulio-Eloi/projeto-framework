@@ -38,6 +38,7 @@ class Login extends BaseController
                     'usuarios_id' => $this->data['usuarios'][0]->usuarios_id,
                     'usuarios_nome' => $this->data['usuarios'][0]->usuarios_nome,
                     'usuarios_email' => $this->data['usuarios'][0]->usuarios_email,
+                    'usuarios_nivel' => $this->data['usuarios'][0]->usuarios_nivel,
                     'logged_in' => TRUE
                 ];
                 
