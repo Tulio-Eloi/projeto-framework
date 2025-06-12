@@ -60,9 +60,9 @@
             <div class="mb-3">
                 <label for="nivel">Nível</label>
                 <select name="nivel" class="form-control" required>
-                    <?php foreach ($nivel as $n): ?>
+                    <?php foreach ($niveis as $n): ?>
                         <option value="<?= esc($n->id_nivel) ?>"
-                            <?= isset($cliente) && $cliente->nivel_id_cliente == $n->id_nivel ? 'selected' : '' ?>>
+                            <?= isset($usuarios) && $usuarios->usuarios_nivel == $n->id_nivel ? 'selected' : '' ?>>
                             <?= esc($n->nivel) ?>
                         </option>
                     <?php endforeach; ?>

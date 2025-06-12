@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql:3306
--- Tempo de geração: 09/06/2025 às 01:51
+-- Tempo de geração: 12/06/2025 às 19:33
 -- Versão do servidor: 8.0.41
 -- Versão do PHP: 8.2.27
 
@@ -28,15 +28,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `categorias` (
-  `categorias_id` int NOT NULL
+  `categorias_id` int NOT NULL,
+  `categorias_nome` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Despejando dados para a tabela `categorias`
 --
 
-INSERT INTO `categorias` (`categorias_id`) VALUES
-(1);
+INSERT INTO `categorias` (`categorias_id`, `categorias_nome`) VALUES
+(1, '');
 
 -- --------------------------------------------------------
 
@@ -71,9 +72,15 @@ CREATE TABLE `clientes` (
   `cpf_cliente` varchar(11) NOT NULL,
   `data_nasc_cliente` date NOT NULL,
   `fone_cliente` varchar(11) NOT NULL,
-  `nivel_id_cliente` int NOT NULL,
   `usuario_cliente` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `clientes`
+--
+
+INSERT INTO `clientes` (`id_clientes`, `nome_cliente`, `sobrenome_cliente`, `cpf_cliente`, `data_nasc_cliente`, `fone_cliente`, `usuario_cliente`) VALUES
+(29, 'Eric', 'Ferreira Gomes', '08120874102', '2003-09-05', '62998628227', 59);
 
 -- --------------------------------------------------------
 
@@ -138,8 +145,13 @@ CREATE TABLE `usuarios` (
   `usuarios_nome` varchar(255) NOT NULL,
   `usuarios_email` varchar(255) NOT NULL,
   `usuarios_senha` varchar(32) NOT NULL,
-  `usuarios_data_cadastro` date NOT NULL
+  `usuarios_data_cadastro` date NOT NULL,
+  `usuarios_nivel` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `usuarios`
+--
 
 --
 -- Índices para tabelas despejadas
@@ -162,8 +174,7 @@ ALTER TABLE `cidades`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id_clientes`),
-  ADD KEY `usuario_cliente` (`usuario_cliente`),
-  ADD KEY `nivel_id_cliente` (`nivel_id_cliente`);
+  ADD KEY `usuario_cliente` (`usuario_cliente`);
 
 --
 -- Índices de tabela `endereco`
@@ -190,7 +201,8 @@ ALTER TABLE `produtos`
 -- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`usuarios_id`);
+  ADD PRIMARY KEY (`usuarios_id`),
+  ADD KEY `usuarios_nivel` (`usuarios_nivel`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -212,7 +224,7 @@ ALTER TABLE `cidades`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_clientes` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_clientes` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de tabela `endereco`
@@ -236,7 +248,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- Restrições para tabelas despejadas
@@ -246,7 +258,6 @@ ALTER TABLE `usuarios`
 -- Restrições para tabelas `clientes`
 --
 ALTER TABLE `clientes`
-  ADD CONSTRAINT `nivel_id_cliente` FOREIGN KEY (`nivel_id_cliente`) REFERENCES `nivel` (`id_nivel`),
   ADD CONSTRAINT `usuario_cliente` FOREIGN KEY (`usuario_cliente`) REFERENCES `usuarios` (`usuarios_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
@@ -261,6 +272,12 @@ ALTER TABLE `endereco`
 --
 ALTER TABLE `produtos`
   ADD CONSTRAINT `fk_produto_categoria` FOREIGN KEY (`produtos_categoria_id`) REFERENCES `categorias` (`categorias_id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+--
+-- Restrições para tabelas `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_nivel` FOREIGN KEY (`usuarios_nivel`) REFERENCES `nivel` (`id_nivel`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

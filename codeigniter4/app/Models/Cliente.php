@@ -12,7 +12,7 @@ class Cliente extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nome_cliente', 'sobrenome_cliente','cpf_cliente','data_nasc_cliente','fone_cliente','nivel_id_cliente','usuario_cliente'];
+    protected $allowedFields    = ['nome_cliente', 'sobrenome_cliente','cpf_cliente','data_nasc_cliente','fone_cliente','usuario_cliente'];
 
 
     // Dates

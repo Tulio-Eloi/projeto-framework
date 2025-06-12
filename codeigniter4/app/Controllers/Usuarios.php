@@ -35,6 +35,7 @@ class Usuarios extends BaseController
             'usuarios_nome'=> '',
            'usuarios_email'=> '',
             'usuarios_senha'=> '',
+            'usuarios_nivel' => '',
             'usuarios_id'=> ''
         ];
 
@@ -45,11 +46,10 @@ class Usuarios extends BaseController
             'cpf_cliente' => '',
             'data_nasc_cliente' => '', 
             'fone_cliente' => '', 
-            'nivel_id_cliente' => '', 
             'usuario_cliente' => ''
 
         ];   
-        $data['nivel'] = $this->nivel->findAll();
+        $data['niveis'] = $this->nivel->findAll();
       
        return view('usuarios/form',$data);
     }
@@ -62,9 +62,10 @@ class Usuarios extends BaseController
             'usuarios_email' => $_REQUEST['usuarios_email'],
             'usuarios_senha' => md5($_REQUEST['usuarios_senha']),
             'usuarios_data_cadastro' => date('Y-m-d'), 
+            'usuarios_nivel'=> $_REQUEST['nivel'], 
         ];         
         $id = $this->usuarios->insert($data['usuarios'], true);
-        echo "<br> <br> <br>";
+        
         
 
        $data['cliente'] = (object) [
@@ -74,7 +75,6 @@ class Usuarios extends BaseController
             'cpf_cliente' => $_REQUEST['cpf_cliente'],
             'data_nasc_cliente' => date('Y-m-d',strtotime($_REQUEST['data_nasc_cliente'])), 
             'fone_cliente' => $_REQUEST['fone_cliente'], 
-            'nivel_id_cliente' => $_REQUEST['nivel'], 
             'usuario_cliente' => $id
 
         ];   
@@ -124,6 +124,7 @@ class Usuarios extends BaseController
             'usuarios_id' => '',
             'usuarios_nome' => $_REQUEST['usuarios_nome'],
             'usuarios_email' => $_REQUEST['usuarios_email'],
+            'usuarios_nivel' => $_REQUEST['nivel'], 
         ];
         $clientesFrom = [
             'id_clientes' => '',
@@ -132,7 +133,6 @@ class Usuarios extends BaseController
             'cpf_cliente' => $_REQUEST['cpf_cliente'],
             'data_nasc_cliente' => date('Y-m-d',strtotime($_REQUEST['data_nasc_cliente'])), 
             'fone_cliente' => $_REQUEST['fone_cliente'], 
-            'nivel_id_cliente' => $_REQUEST['nivel'], 
             'usuario_cliente' => $_REQUEST['usuarios_id']
 
         ];  

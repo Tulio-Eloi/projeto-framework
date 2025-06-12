@@ -17,7 +17,7 @@ class Produtos extends BaseController
     public function index(): string
     {
         $data['title'] = 'Produtos';
-        $data['produtos'] = $this->produtos->join('categorias', 'produtos_categorias_id = categorias_id')->find();
+        $data['produtos'] = $this->produtos->join('categorias', 'produtos_categoria_id = categorias_id')->find();
         //$data['produtos'] = $this->produtos->findAll();
         return view('produtos/index',$data);
     }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Usuarios as Usuarios_login;
+use App\Models\Usuarios_model as Usuarios_login;
 
 class Login extends BaseController
 {
@@ -25,22 +25,18 @@ class Login extends BaseController
         $login = $_REQUEST['login'];
         $senha = md5($_REQUEST['senha']);
         
-        $this->data['usuarios'] = $this->usuarios->where('usuarios_cpf',$login)->
-        orWhere('usuarios_email',$login)->where('usuarios_senha',$senha)->find();
+        $this->data['usuarios'] = $this->usuarios->where
+        ('usuarios_email',$login)->where('usuarios_senha',$senha)->find();
         if($this->data['usuarios'] == []){
             $this->data['msg'] = msg('O usuário ou a senha são invalidos!','danger');
             return view('login',$this->data);
 
         }else{
             if($this->data['usuarios'][0]->usuarios_email == $login  OR
-               $this->data['usuarios'][0]->usuarios_cpf == $login AND
                $this->data['usuarios'][0]->usuarios_senha == $senha ){
                 $infoSession = (object)[
                     'usuarios_id' => $this->data['usuarios'][0]->usuarios_id,
-                    'usuarios_nivel' => $this->data['usuarios'][0]->usuarios_nivel,
                     'usuarios_nome' => $this->data['usuarios'][0]->usuarios_nome,
-                    'usuarios_sobrenome' => $this->data['usuarios'][0]->usuarios_sobrenome,
-                    'usuarios_cpf' => $this->data['usuarios'][0]->usuarios_cpf,
                     'usuarios_email' => $this->data['usuarios'][0]->usuarios_email,
                     'logged_in' => TRUE
                 ];

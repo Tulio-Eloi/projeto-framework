@@ -17,7 +17,8 @@ class Usuarios_model extends Model
     protected $allowedFields    = ['usuarios_nome',
                                    'usuarios_email',
                                    'usuarios_senha',
-                                   'usuarios_data_cadastro'
+                                   'usuarios_data_cadastro',
+                                  'usuarios_nivel'
                                     ];
 
     // Dates
