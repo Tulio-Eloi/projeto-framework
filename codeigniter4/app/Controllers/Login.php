@@ -44,7 +44,7 @@ class Login extends BaseController
                 
                 $this->session->set('login', $infoSession);
 
-                if($this->data['usuarios'][0]->usuarios_nivel == 0){
+                if($this->data['usuarios'][0]->usuarios_nivel == 2){
                     
                     return view('user/index',$this->data);
                 }

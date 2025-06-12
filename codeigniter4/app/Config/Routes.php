@@ -72,3 +72,11 @@ $routes->get('/enderecos/editar/(:any)', 'Endereco::edit/$1');// esse (:any) foi
 $routes->post('/enderecos/update', 'Endereco::update');
 $routes->post('/endereco/search', 'Endereco::search');
 
+$routes->get('/imgprodutos', 'Imgprodutos::index');
+$routes->get('/imgprodutos/index', 'Imgprodutos::index');
+$routes->get('/imgprodutos/new', 'Imgprodutos::new');
+$routes->post('/imgprodutos/create', 'Imgprodutos::create');
+$routes->get('/imgprodutos/edit/(:any)', 'Imgprodutos::edit/$1');
+$routes->post('/imgprodutos/update', 'Imgprodutos::update');
+$routes->post('/imgprodutos/search', 'Imgprodutos::search');
+$routes->get('/imgprodutos/delete/(:any)', 'Imgprodutos::delete/$1');
