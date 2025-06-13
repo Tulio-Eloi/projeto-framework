@@ -42,24 +42,9 @@
 
             <!-- Aqui vai o laço de repetição -->
             <?php for($i=0; $i < count($resultado); $i++){ ?>
-            <tr>
-                <th scope="row"><?= $resultado[$i]->Id_vendas; ?></th>
-                <td><?= $resultado[$i]->usuarios_nome?></td>
-                <td><?= $resultado[$i]->venda_total?></td>
-                <td><?= $resultado[$i]->vendas_data_compra?></td>
-                <td>
-                    <a class="btn btn-primary" href="<?= base_url('usuarios/edit/'.$usuarios[$i]->usuarios_id); ?>">
-                        Editar
-                        <i class="bi bi-pencil-square"></i>
-                    </a>
-                    <a class="btn btn-danger" href="<?= base_url('usuarios/delete/'.$usuarios[$i]->usuarios_id); ?>">
-                        Excluir
-                        <i class="bi bi-x-circle"></i>
-                    </a>
-                </td>
-            </tr>
-            <?php } ?>
-
+                <pre>
+            <?php print_r($resultado); } ?>
+            </pre>
         </tbody>
     </table>
 
