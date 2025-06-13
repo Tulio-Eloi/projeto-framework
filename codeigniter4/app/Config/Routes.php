@@ -80,3 +80,6 @@ $routes->get('/imgprodutos/edit/(:any)', 'Imgprodutos::edit/$1');
 $routes->post('/imgprodutos/update', 'Imgprodutos::update');
 $routes->post('/imgprodutos/search', 'Imgprodutos::search');
 $routes->get('/imgprodutos/delete/(:any)', 'Imgprodutos::delete/$1');
+
+$routes->get('/vendas', 'Vendas::index');
+
