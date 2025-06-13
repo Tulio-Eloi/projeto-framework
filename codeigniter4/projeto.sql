@@ -153,6 +153,10 @@ CREATE TABLE `usuarios` (
 -- Despejando dados para a tabela `usuarios`
 --
 
+INSERT INTO `usuarios` (`usuarios_id`, `usuarios_nome`, `usuarios_email`, `usuarios_senha`, `usuarios_data_cadastro`, `usuarios_nivel`) 
+VALUES (59, 'Eric Gomes', 'eric@gmail.com', 'admin', CURDATE(), 3);
+
+
 --
 -- Índices para tabelas despejadas
 --
