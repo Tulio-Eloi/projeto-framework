@@ -34,7 +34,7 @@ class Vendas extends BaseController
          $vendaEncontrado = null;
          $usuarioEncontrado = null;
         foreach($data['vendas_prod'] as $prod){
-           var_dump($prod);
+           
             foreach( $data['prod'] as $prods){
 
                 if($prods->produtos_id == $prod->id_produto){
@@ -56,7 +56,11 @@ class Vendas extends BaseController
                               
                         }
                     }
-            if($vendaEncontrado && $produtoEncontrado){
+           
+           
+        }
+        echo "<br> <br> <br>";
+         if($vendaEncontrado && $produtoEncontrado && $usuarioEncontrado){
                  $data['resultado'] = [
                 'produto' => $produtoEncontrado,
                 'venda' => $vendaEncontrado,
@@ -64,9 +68,9 @@ class Vendas extends BaseController
             ];
             
             }
-           
-        }
-        var_dump($data);
+        echo '<pre>';
+        print_r($data['resultado']);
+          echo '</pre>';
         return view('vendas/index',$data);
     }
 

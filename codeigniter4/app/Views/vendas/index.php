@@ -41,10 +41,27 @@
         <tbody class="table-group-divider">
 
             <!-- Aqui vai o laço de repetição -->
-            <?php for($i=0; $i < count($resultado); $i++){ ?>
-                <pre>
-            <?php print_r($resultado); } ?>
-            </pre>
+            <?php for($i=0; $i < count($resultado); $i++){ 
+                ?>
+                
+            <tr>
+                <th scope="row"><?= $resultado["venda"]->vendas_id; ?></th>
+                <td><?= $resultado['user']->usuarios_nome?></td>
+                <td><?= $resultado['venda']->venda_total?></td>
+                <td><?= $resultado['venda']->vendas_data_compra?></td>
+                <td>
+                    <a class="btn btn-primary" href="<?= base_url('usuarios/edit/'.$resultado["venda"]->vendas_id); ?>">
+                        Editar
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a class="btn btn-danger" href="<?= base_url('usuarios/delete/'.$resultado["venda"]->vendas_id); ?>">
+                        Excluir
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </td>
+            </tr>
+            <?php } ?>
+            
         </tbody>
     </table>
 
