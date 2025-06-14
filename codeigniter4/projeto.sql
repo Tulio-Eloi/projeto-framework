@@ -156,6 +156,21 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`usuarios_id`, `usuarios_nome`, `usuarios_email`, `usuarios_senha`, `usuarios_data_cadastro`, `usuarios_nivel`) 
 VALUES (59, 'Eric Gomes', 'eric@gmail.com', 'admin', CURDATE(), 3);
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `estoques`
+--
+
+
+CREATE TABLE `estoques` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `produto_id` INT NOT NULL,
+  `quantidade` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (produto_id) REFERENCES produtos(produtos_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 --
 -- Índices para tabelas despejadas

@@ -83,3 +83,13 @@ $routes->get('/imgprodutos/delete/(:any)', 'Imgprodutos::delete/$1');
 
 $routes->get('/vendas', 'Vendas::index');
 
+$routes->get('estoques', 'Estoques::index');
+$routes->post('estoques/search', 'Estoques::search');
+$routes->get('estoques/new', 'Estoques::create');
+$routes->post('estoques/create', 'Estoques::create');
+$routes->get('estoques/edit/(:num)', 'Estoques::edit/$1');
+$routes->post('estoques/update/(:num)', 'Estoques::update/$1');
+$routes->get('estoques/delete/(:num)', 'Estoques::delete/$1');
+
+
+
