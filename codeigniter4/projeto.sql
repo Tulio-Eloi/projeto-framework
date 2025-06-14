@@ -14,8 +14,12 @@ SET time_zone = "+00:00";
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET @COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `projeto`
+--
 
 --
 -- Banco de dados: `projeto`
@@ -26,10 +30,10 @@ SET time_zone = "+00:00";
 --
 -- Estrutura para tabela `categorias`
 --
-
 CREATE TABLE `categorias` (
   `categorias_id` int NOT NULL,
-  `categorias_nome` varchar(255) NOT NULL
+  `categorias_nome` varchar(255) NOT NULL,
+  PRIMARY KEY (`categorias_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -37,18 +41,20 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`categorias_id`, `categorias_nome`) VALUES
-(1, '');
+(1, 'Comida'),
+(2, 'Bebida'),
+(3, 'Sobremesa');
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura para tabela `cidades`
 --
-
 CREATE TABLE `cidades` (
   `cidades_id` int NOT NULL,
   `cidades_nome` varchar(255) NOT NULL,
-  `cidades_uf` varchar(2) NOT NULL
+  `cidades_uf` varchar(2) NOT NULL,
+  PRIMARY KEY (`cidades_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -124,15 +130,59 @@ INSERT INTO `nivel` (`id_nivel`, `nivel`) VALUES
 --
 -- Estrutura para tabela `produtos`
 --
-
+-- PRIMARY KEY adicionada diretamente na criação da tabela
 CREATE TABLE `produtos` (
-  `produtos_id` int NOT NULL,
+  `produtos_id` int NOT NULL AUTO_INCREMENT,
   `produtos_nome` varchar(255) NOT NULL,
   `produtos_descricao` text NOT NULL,
   `produtos_preco_custo` float(9,2) NOT NULL,
   `produtos_preco_venda` float(9,2) NOT NULL,
-  `produtos_categoria_id` int NOT NULL
+  `produtos_categoria_id` int NOT NULL,
+  PRIMARY KEY (`produtos_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `estoques`
+--
+
+
+CREATE TABLE `estoques` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `produto_id` INT NOT NULL,
+  `quantidade` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (produto_id) REFERENCES produtos(produtos_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Gatilho para adicionar todo novo produto a tabela 'estoques'
+DELIMITER //
+
+CREATE TRIGGER trg_produto_insert AFTER INSERT ON produtos
+FOR EACH ROW
+BEGIN
+  INSERT INTO estoques (produto_id, quantidade)
+  VALUES (NEW.produtos_id, 1);
+END;
+//
+
+DELIMITER ;
+
+-- Colocando dados na tabela produtos
+-- Estes INSERTs agora virão *após* a criação do trigger
+INSERT INTO `produtos` (
+    `produtos_nome`,
+    `produtos_descricao`,
+    `produtos_preco_custo`,
+    `produtos_preco_venda`,
+    `produtos_categoria_id`
+) VALUES
+('X-Burguer', 'Delicioso hambúrguer com queijo e salada.', 8.50, 15.00, 1), 
+('Suco de Laranja', 'Suco natural de laranja, 300ml.', 3.00, 7.00, 2),        
+('Pudim', 'Pudim de leite condensado com calda de caramelo.', 4.00, 9.50, 3); 
 
 -- --------------------------------------------------------
 
@@ -152,24 +202,11 @@ CREATE TABLE `usuarios` (
 --
 -- Despejando dados para a tabela `usuarios`
 --
-
+-- CORREÇÃO: Removido o segundo 'VALUES'
 INSERT INTO `usuarios` (`usuarios_id`, `usuarios_nome`, `usuarios_email`, `usuarios_senha`, `usuarios_data_cadastro`, `usuarios_nivel`) 
-VALUES (59, 'Eric Gomes', 'eric@gmail.com', 'admin', CURDATE(), 3);
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `estoques`
---
-
-
-CREATE TABLE `estoques` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `produto_id` INT NOT NULL,
-  `quantidade` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (produto_id) REFERENCES produtos(produtos_id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+VALUES 
+(59, 'Eric Gomes', 'eric@gmail.com', 'admin', CURDATE(), 3),
+(60, 'Adauto Turibio', 'adauto@gmail.com', '123456', CURDATE(), 3);
 
 
 --
@@ -178,15 +215,11 @@ CREATE TABLE `estoques` (
 
 --
 -- Índices de tabela `categorias`
---
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`categorias_id`);
+-- REMOVIDO: A Primary Key já está definida no CREATE TABLE `categorias`
 
 --
 -- Índices de tabela `cidades`
---
-ALTER TABLE `cidades`
-  ADD PRIMARY KEY (`cidades_id`);
+-- REMOVIDO: A Primary Key já está definida no CREATE TABLE `cidades`
 
 --
 -- Índices de tabela `clientes`
@@ -211,10 +244,10 @@ ALTER TABLE `nivel`
 
 --
 -- Índices de tabela `produtos`
---
+-- REMOVIDO: A Primary Key já está definida no CREATE TABLE `produtos`
+-- ALTER TABLE `produtos` ADD PRIMARY KEY (`produtos_id`);
 ALTER TABLE `produtos`
-  ADD PRIMARY KEY (`produtos_id`),
-  ADD KEY `fk_produto_categoria` (`produtos_categoria_id`);
+  ADD KEY `fk_produto_categoria` (`produtos_categoria_id`); -- Mantido este KEY para a FK
 
 --
 -- Índices de tabela `usuarios`
@@ -231,7 +264,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `categorias_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `categorias_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4; -- AUTO_INCREMENT ajustado para o maior ID inserido
 
 --
 -- AUTO_INCREMENT de tabela `cidades`
@@ -267,7 +300,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61; -- Ajustado para o próximo ID disponível (60+1)
 
 --
 -- Restrições para tabelas despejadas
