@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use CodeIgniter\Model;
+
+
 helper('functions');
 
 class Pedido {

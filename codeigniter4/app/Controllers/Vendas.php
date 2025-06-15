@@ -30,47 +30,50 @@ class Vendas extends BaseController
          $data['prod'] = $this->produtos->findAll();
          $data['vendas'] = $this->vendas->findAll();
          $data['usuarios'] = $this->usuarios->findAll();
-         $produtoEncontrado = null;
-         $vendaEncontrado = null;
-         $usuarioEncontrado = null;
+         $produtoEncontrado = [];
+         $vendaEncontrado = [];
+         $usuarioEncontrado = [];
         foreach($data['vendas_prod'] as $prod){
            
-            foreach( $data['prod'] as $prods){
-
-                if($prods->produtos_id == $prod->id_produto){
-                     $produtoEncontrado = $prods;
-                    break;
-                
-                }
-                }
-                foreach($data['vendas'] as $vend){
-                       
-                        if($vend->vendas_id == $prod->Id_vendas ){
-                            foreach($data['usuarios'] as $user){
-                                if($user->usuarios_id == $vend->vendas_usuario_id){
-                                    $vendaEncontrado = $vend;
-                                    $usuarioEncontrado = $user;
-                                    break;
-                                }
-                            }
-                              
-                        }
-                    }
-           
-           
-        }
-        echo "<br> <br> <br>";
-         if($vendaEncontrado && $produtoEncontrado && $usuarioEncontrado){
-                 $data['resultado'] = [
-                'produto' => $produtoEncontrado,
-                'venda' => $vendaEncontrado,
-                'user' => $usuarioEncontrado
-            ];
-            
+              foreach($data['prod'] as $prods){
+            if($prods->produtos_id == $prod->id_produto){
+                $produtoEncontrado = $prods;
+                break;
             }
-        echo '<pre>';
-        print_r($data['resultado']);
-          echo '</pre>';
+        }
+
+        // Venda
+        foreach($data['vendas'] as $vend){
+            if($vend->vendas_id == $prod->Id_vendas){
+                $vendaEncontrado = $vend;
+                break;
+            }
+        }
+
+        // Usuário
+        if($vendaEncontrado){
+            foreach($data['usuarios'] as $user){
+                if($user->usuarios_id == $vendaEncontrado->vendas_usuario_id){
+                    $usuarioEncontrado = $user;
+                    break;
+                }
+            }
+        }
+
+        // Se encontrou tudo, adiciona ao resultado
+        if($produtoEncontrado && $vendaEncontrado && $usuarioEncontrado){
+            $resultado[] = [
+                'usuarios_id' => $usuarioEncontrado->usuarios_id,
+                'venda_id'      => $vendaEncontrado->vendas_id,
+                'produto'       => $produtoEncontrado->produtos_nome,
+                'venda_valor'   => $vendaEncontrado->venda_total,
+                'venda_compra'  => $vendaEncontrado->vendas_data_compra,
+                'user'          => $usuarioEncontrado->usuarios_nome
+            ];
+        }
+    }     
+         $data['resultado'] = $resultado;
+
         return view('vendas/index',$data);
     }
 
