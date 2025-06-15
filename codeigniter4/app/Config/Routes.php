@@ -87,4 +87,11 @@ $routes->get('estoques', 'Estoques::index');
 $routes->get('estoques/edit/(:num)', 'Estoques::edit/$1');
 $routes->post('estoques/update', 'Estoques::update');
 
+$routes->get('pedidos', 'Pedidos::index');
+$routes->get('pedidos/create', 'Pedidos::create');
+$routes->post('pedidos/store', 'Pedidos::store');
+$routes->get('pedidos/edit/(:num)', 'Pedidos::edit/$1');
+$routes->post('pedidos/update', 'Pedidos::update');
+$routes->get('pedidos/delete/(:num)', 'Pedidos::delete/$1');
+
 

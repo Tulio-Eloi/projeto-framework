@@ -145,6 +145,39 @@ CREATE TABLE `produtos` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `Pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `pedido_id` INT NOT NULL AUTO_INCREMENT,
+  `cliente_id` INT NOT NULL,
+  `endereco_id` INT NOT NULL,
+  `data_pedido` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  status VARCHAR(50) NOT NULL DEFAULT 'Pendente',
+  PRIMARY KEY (`pedido_id`),
+  FOREIGN KEY (`cliente_id`) REFERENCES `clientes`(`id_clientes`) ON DELETE RESTRICT,
+  FOREIGN KEY (`endereco_id`) REFERENCES `endereco`(`endereco_id`) ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+--
+-- Estrutura para tabela `Pedidos Itens`
+--
+
+CREATE TABLE pedidos_itens (
+  `item_id` INT NOT NULL AUTO_INCREMENT,
+  `pedido_id` INT NOT NULL,
+  `produto_id` INT NOT NULL,
+  `quantidade` INT NOT NULL,
+  `preco_unitario` FLOAT(9,2) NOT NULL,
+  PRIMARY KEY (`item_id`),
+  FOREIGN KEY (`pedido_id`) REFERENCES `pedidos`(`pedido_id`) ON DELETE CASCADE,
+  FOREIGN KEY (`produto_id`) REFERENCES `produtos`(`produtos_id`) ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+--
 -- Estrutura para tabela `estoques`
 --
 
@@ -154,7 +187,7 @@ CREATE TABLE `estoques` (
   `produto_id` INT NOT NULL,
   `quantidade` INT NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (produto_id) REFERENCES produtos(produtos_id) ON DELETE CASCADE
+  FOREIGN KEY (`produto_id`) REFERENCES `produtos`(`produtos_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
