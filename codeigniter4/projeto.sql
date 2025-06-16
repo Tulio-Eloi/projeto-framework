@@ -1,136 +1,71 @@
--- phpMyAdmin SQL Dump
--- version 5.2.2
--- https://www.phpmyadmin.net/
---
--- Host: mysql:3306
--- Tempo de geração: 12/06/2025 às 19:33
--- Versão do servidor: 8.0.41
--- Versão do PHP: 8.2.27
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+-- ============================================================
+-- Estruturas de tabelas
+-- ============================================================
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Banco de dados: `projeto`
---
-
---
--- Banco de dados: `projeto`
---
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `categorias`
---
 CREATE TABLE `categorias` (
-  `categorias_id` int NOT NULL,
+  `categorias_id` int NOT NULL AUTO_INCREMENT,
   `categorias_nome` varchar(255) NOT NULL,
   PRIMARY KEY (`categorias_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Despejando dados para a tabela `categorias`
---
-
-INSERT INTO `categorias` (`categorias_id`, `categorias_nome`) VALUES
-(1, 'Comida'),
-(2, 'Bebida'),
-(3, 'Sobremesa');
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `cidades`
---
 CREATE TABLE `cidades` (
-  `cidades_id` int NOT NULL,
+  `cidades_id` int NOT NULL AUTO_INCREMENT,
   `cidades_nome` varchar(255) NOT NULL,
   `cidades_uf` varchar(2) NOT NULL,
   PRIMARY KEY (`cidades_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Despejando dados para a tabela `cidades`
---
+CREATE TABLE `nivel` (
+  `id_nivel` int NOT NULL AUTO_INCREMENT,
+  `nivel` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_nivel`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `cidades` (`cidades_id`, `cidades_nome`, `cidades_uf`) VALUES
-(1, 'rialma', 'GO'),
-(3, 'Ceres', 'Go');
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `clientes`
---
+CREATE TABLE `usuarios` (
+  `usuarios_id` int NOT NULL AUTO_INCREMENT,
+  `usuarios_nome` varchar(255) NOT NULL,
+  `usuarios_email` varchar(255) NOT NULL,
+  `usuarios_senha` varchar(32) NOT NULL,
+  `usuarios_data_cadastro` date NOT NULL,
+  `usuarios_nivel` int NOT NULL,
+  PRIMARY KEY (`usuarios_id`),
+  KEY `usuarios_nivel` (`usuarios_nivel`),
+  FOREIGN KEY (`usuarios_nivel`) REFERENCES `nivel` (`id_nivel`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `clientes` (
-  `id_clientes` int NOT NULL,
+  `id_clientes` int NOT NULL AUTO_INCREMENT,
   `nome_cliente` varchar(20) NOT NULL,
   `sobrenome_cliente` varchar(50) NOT NULL,
   `cpf_cliente` varchar(11) NOT NULL,
   `data_nasc_cliente` date NOT NULL,
   `fone_cliente` varchar(11) NOT NULL,
-  `usuario_cliente` int NOT NULL
+  `usuario_cliente` int NOT NULL,
+  PRIMARY KEY (`id_clientes`),
+  KEY `usuario_cliente` (`usuario_cliente`),
+  FOREIGN KEY (`usuario_cliente`) REFERENCES `usuarios` (`usuarios_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Despejando dados para a tabela `clientes`
---
-
-INSERT INTO `clientes` (`id_clientes`, `nome_cliente`, `sobrenome_cliente`, `cpf_cliente`, `data_nasc_cliente`, `fone_cliente`, `usuario_cliente`) VALUES
-(29, 'Eric', 'Ferreira Gomes', '08120874102', '2003-09-05', '62998628227', 59);
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `endereco`
---
-
 CREATE TABLE `endereco` (
-  `endereco_id` int NOT NULL,
+  `endereco_id` int NOT NULL AUTO_INCREMENT,
   `endereco_rua` varchar(255) NOT NULL,
   `endereco_numero` int NOT NULL,
   `endereco_complemento` varchar(255) NOT NULL,
   `endereco_cep` varchar(10) NOT NULL,
   `endereco_cidade_id` int NOT NULL,
   `endereco_status` int NOT NULL,
-  `endereco_usuario_id` int NOT NULL
+  `endereco_usuario_id` int NOT NULL,
+  PRIMARY KEY (`endereco_id`),
+  KEY `endereco_cidade_id` (`endereco_cidade_id`),
+  KEY `endereco_usuario_id` (`endereco_usuario_id`),
+  FOREIGN KEY (`endereco_cidade_id`) REFERENCES `cidades` (`cidades_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  FOREIGN KEY (`endereco_usuario_id`) REFERENCES `usuarios` (`usuarios_id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `nivel`
---
-
-CREATE TABLE `nivel` (
-  `id_nivel` int NOT NULL,
-  `nivel` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Despejando dados para a tabela `nivel`
---
-
-INSERT INTO `nivel` (`id_nivel`, `nivel`) VALUES
-(1, 'Admin'),
-(2, 'Funcionario'),
-(3, 'Cliente');
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `produtos`
---
--- PRIMARY KEY adicionada diretamente na criação da tabela
 CREATE TABLE `produtos` (
   `produtos_id` int NOT NULL AUTO_INCREMENT,
   `produtos_nome` varchar(255) NOT NULL,
@@ -138,33 +73,23 @@ CREATE TABLE `produtos` (
   `produtos_preco_custo` float(9,2) NOT NULL,
   `produtos_preco_venda` float(9,2) NOT NULL,
   `produtos_categoria_id` int NOT NULL,
-  PRIMARY KEY (`produtos_id`)
+  PRIMARY KEY (`produtos_id`),
+  KEY `fk_produto_categoria` (`produtos_categoria_id`),
+  FOREIGN KEY (`produtos_categoria_id`) REFERENCES `categorias` (`categorias_id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `Pedidos`
---
 
 CREATE TABLE `pedidos` (
   `pedido_id` INT NOT NULL AUTO_INCREMENT,
   `cliente_id` INT NOT NULL,
   `endereco_id` INT NOT NULL,
   `data_pedido` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  status VARCHAR(50) NOT NULL DEFAULT 'Pendente',
+  `status` VARCHAR(50) NOT NULL DEFAULT 'Pendente',
   PRIMARY KEY (`pedido_id`),
   FOREIGN KEY (`cliente_id`) REFERENCES `clientes`(`id_clientes`) ON DELETE RESTRICT,
   FOREIGN KEY (`endereco_id`) REFERENCES `endereco`(`endereco_id`) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
---
--- Estrutura para tabela `Pedidos Itens`
---
-
-CREATE TABLE pedidos_itens (
+CREATE TABLE `pedidos_itens` (
   `item_id` INT NOT NULL AUTO_INCREMENT,
   `pedido_id` INT NOT NULL,
   `produto_id` INT NOT NULL,
@@ -175,13 +100,6 @@ CREATE TABLE pedidos_itens (
   FOREIGN KEY (`produto_id`) REFERENCES `produtos`(`produtos_id`) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-
---
--- Estrutura para tabela `estoques`
---
-
-
 CREATE TABLE `estoques` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `produto_id` INT NOT NULL,
@@ -190,181 +108,74 @@ CREATE TABLE `estoques` (
   FOREIGN KEY (`produto_id`) REFERENCES `produtos`(`produtos_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
--- Gatilho para adicionar todo novo produto a tabela 'estoques'
 DELIMITER //
 
 CREATE TRIGGER trg_produto_insert AFTER INSERT ON produtos
 FOR EACH ROW
 BEGIN
-  INSERT INTO estoques (produto_id, quantidade)
-  VALUES (NEW.produtos_id, 1);
+  INSERT INTO estoques (produto_id, quantidade) VALUES (NEW.produtos_id, 1);
 END;
 //
 
 DELIMITER ;
 
--- Colocando dados na tabela produtos
--- Estes INSERTs agora virão *após* a criação do trigger
-INSERT INTO `produtos` (
-    `produtos_nome`,
-    `produtos_descricao`,
-    `produtos_preco_custo`,
-    `produtos_preco_venda`,
-    `produtos_categoria_id`
-) VALUES
-('X-Burguer', 'Delicioso hambúrguer com queijo e salada.', 8.50, 15.00, 1), 
-('Suco de Laranja', 'Suco natural de laranja, 300ml.', 3.00, 7.00, 2),        
-('Pudim', 'Pudim de leite condensado com calda de caramelo.', 4.00, 9.50, 3); 
+-- ============================================================
+-- Dados das tabelas
+-- ============================================================
 
--- --------------------------------------------------------
+INSERT INTO `categorias` (`categorias_nome`) VALUES
+('Comida'),
+('Bebida'),
+('Sobremesa');
 
---
--- Estrutura para tabela `usuarios`
---
+INSERT INTO `cidades` (`cidades_nome`, `cidades_uf`) VALUES
+('Rialma', 'GO'),
+('Ceres', 'GO'),
+('Goiânia', 'GO');
 
-CREATE TABLE `usuarios` (
-  `usuarios_id` int NOT NULL,
-  `usuarios_nome` varchar(255) NOT NULL,
-  `usuarios_email` varchar(255) NOT NULL,
-  `usuarios_senha` varchar(32) NOT NULL,
-  `usuarios_data_cadastro` date NOT NULL,
-  `usuarios_nivel` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+INSERT INTO `nivel` (`nivel`) VALUES
+('Admin'),
+('Funcionario'),
+('Cliente');
 
---
--- Despejando dados para a tabela `usuarios`
---
--- CORREÇÃO: Removido o segundo 'VALUES'
-INSERT INTO `usuarios` (`usuarios_id`, `usuarios_nome`, `usuarios_email`, `usuarios_senha`, `usuarios_data_cadastro`, `usuarios_nivel`) 
-VALUES 
-(59, 'Eric Gomes', 'eric@gmail.com', 'admin', CURDATE(), 3),
-(60, 'Adauto Turibio', 'adauto@gmail.com', '123456', CURDATE(), 3);
+INSERT INTO `usuarios` (`usuarios_nome`, `usuarios_email`, `usuarios_senha`, `usuarios_data_cadastro`, `usuarios_nivel`) VALUES
+('Eric Gomes', 'eric@gmail.com', 'admin', CURDATE(), 1),
+('Adauto Turibio', 'adauto@gmail.com', '123456', CURDATE(), 3),
+('Carlos Silva', 'carlos@gmail.com', 'abc123', CURDATE(), 2),
+('Mariana Souza', 'mariana@gmail.com', 'def456', CURDATE(), 2),
+('João Pedro', 'joao@gmail.com', 'ghi789', CURDATE(), 3);
 
+INSERT INTO `clientes` (`nome_cliente`, `sobrenome_cliente`, `cpf_cliente`, `data_nasc_cliente`, `fone_cliente`, `usuario_cliente`) VALUES
+('Eric', 'Ferreira Gomes', '08120874102', '2003-09-05', '62998628227', 1),
+('Carlos', 'Silva', '12345678901', '1990-01-01', '62999999999', 3),
+('Mariana', 'Souza', '23456789012', '1985-05-05', '62988888888', 4),
+('João', 'Pedro', '34567890123', '2000-12-12', '62977777777', 5);
 
---
--- Índices para tabelas despejadas
---
+INSERT INTO `endereco` (`endereco_rua`, `endereco_numero`, `endereco_complemento`, `endereco_cep`, `endereco_cidade_id`, `endereco_status`, `endereco_usuario_id`) VALUES
+('Rua das Flores', 123, 'Apto 101', '74000000', 1, 1, 1),
+('Av. Brasil', 456, 'Casa', '74100000', 2, 1, 3),
+('Rua Goiás', 789, 'Bloco B', '74200000', 3, 1, 4);
 
---
--- Índices de tabela `categorias`
--- REMOVIDO: A Primary Key já está definida no CREATE TABLE `categorias`
+INSERT INTO `produtos` (`produtos_nome`, `produtos_descricao`, `produtos_preco_custo`, `produtos_preco_venda`, `produtos_categoria_id`) VALUES
+('X-Burguer', 'Delicioso hambúrguer com queijo e salada.', 8.50, 15.00, 1),
+('Suco de Laranja', 'Suco natural de laranja, 300ml.', 3.00, 7.00, 2),
+('Pudim', 'Pudim de leite condensado com calda de caramelo.', 4.00, 9.50, 3);
 
---
--- Índices de tabela `cidades`
--- REMOVIDO: A Primary Key já está definida no CREATE TABLE `cidades`
+INSERT INTO `pedidos` (`cliente_id`, `endereco_id`, `status`) VALUES
+(1, 1, 'Pendente'),
+(2, 2, 'Em Preparo'),
+(3, 3, 'Entregue');
 
---
--- Índices de tabela `clientes`
---
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`id_clientes`),
-  ADD KEY `usuario_cliente` (`usuario_cliente`);
+INSERT INTO `pedidos_itens` (`pedido_id`, `produto_id`, `quantidade`, `preco_unitario`) VALUES
+(1, 1, 2, 15.00),
+(1, 2, 1, 7.00),
+(2, 3, 3, 9.50),
+(3, 1, 1, 15.00),
+(3, 3, 2, 9.50);
 
---
--- Índices de tabela `endereco`
---
-ALTER TABLE `endereco`
-  ADD PRIMARY KEY (`endereco_id`),
-  ADD KEY `endereco_cidade_id` (`endereco_cidade_id`),
-  ADD KEY `endereco_usuario_id` (`endereco_usuario_id`);
+-- Ajustando estoques
+UPDATE `estoques` SET quantidade = 50 WHERE produto_id = 1;
+UPDATE `estoques` SET quantidade = 100 WHERE produto_id = 2;
+UPDATE `estoques` SET quantidade = 25 WHERE produto_id = 3;
 
---
--- Índices de tabela `nivel`
---
-ALTER TABLE `nivel`
-  ADD PRIMARY KEY (`id_nivel`);
-
---
--- Índices de tabela `produtos`
--- REMOVIDO: A Primary Key já está definida no CREATE TABLE `produtos`
--- ALTER TABLE `produtos` ADD PRIMARY KEY (`produtos_id`);
-ALTER TABLE `produtos`
-  ADD KEY `fk_produto_categoria` (`produtos_categoria_id`); -- Mantido este KEY para a FK
-
---
--- Índices de tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`usuarios_id`),
-  ADD KEY `usuarios_nivel` (`usuarios_nivel`);
-
---
--- AUTO_INCREMENT para tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `categorias`
---
-ALTER TABLE `categorias`
-  MODIFY `categorias_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4; -- AUTO_INCREMENT ajustado para o maior ID inserido
-
---
--- AUTO_INCREMENT de tabela `cidades`
---
-ALTER TABLE `cidades`
-  MODIFY `cidades_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de tabela `clientes`
---
-ALTER TABLE `clientes`
-  MODIFY `id_clientes` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT de tabela `endereco`
---
-ALTER TABLE `endereco`
-  MODIFY `endereco_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de tabela `nivel`
---
-ALTER TABLE `nivel`
-  MODIFY `id_nivel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de tabela `produtos`
---
-ALTER TABLE `produtos`
-  MODIFY `produtos_id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `usuarios_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61; -- Ajustado para o próximo ID disponível (60+1)
-
---
--- Restrições para tabelas despejadas
---
-
---
--- Restrições para tabelas `clientes`
---
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `usuario_cliente` FOREIGN KEY (`usuario_cliente`) REFERENCES `usuarios` (`usuarios_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
---
--- Restrições para tabelas `endereco`
---
-ALTER TABLE `endereco`
-  ADD CONSTRAINT `endereco_cidade_id` FOREIGN KEY (`endereco_cidade_id`) REFERENCES `cidades` (`cidades_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
-  ADD CONSTRAINT `endereco_usuario_id` FOREIGN KEY (`endereco_usuario_id`) REFERENCES `usuarios` (`usuarios_id`) ON DELETE RESTRICT ON UPDATE CASCADE;
-
---
--- Restrições para tabelas `produtos`
---
-ALTER TABLE `produtos`
-  ADD CONSTRAINT `fk_produto_categoria` FOREIGN KEY (`produtos_categoria_id`) REFERENCES `categorias` (`categorias_id`) ON DELETE RESTRICT ON UPDATE CASCADE;
-
---
--- Restrições para tabelas `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_nivel` FOREIGN KEY (`usuarios_nivel`) REFERENCES `nivel` (`id_nivel`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
