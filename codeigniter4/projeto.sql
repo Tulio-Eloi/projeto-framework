@@ -146,7 +146,7 @@ INSERT INTO `usuarios` (`usuarios_nome`, `usuarios_email`, `usuarios_senha`, `us
 ('João Pedro', 'joao@gmail.com', 'ghi789', CURDATE(), 3);
 
 INSERT INTO `clientes` (`nome_cliente`, `sobrenome_cliente`, `cpf_cliente`, `data_nasc_cliente`, `fone_cliente`, `usuario_cliente`) VALUES
-('Eric', 'Ferreira Gomes', '08120874102', '2003-09-05', '62998628227', 1),
+('Eric', 'Ferreira Gomes', '9999999999', '2003-09-05', '99999999', 1),
 ('Carlos', 'Silva', '12345678901', '1990-01-01', '62999999999', 3),
 ('Mariana', 'Souza', '23456789012', '1985-05-05', '62988888888', 4),
 ('João', 'Pedro', '34567890123', '2000-12-12', '62977777777', 5);
