@@ -16,47 +16,29 @@
 
     <?php if(isset($msg)){echo $msg;} ?>
 
-    <form action="<?= base_url('usuarios/search'); ?>" class="d-flex" role="search" method="post">
-        <input class="form-control me-2" name="pesquisar" type="search" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">
-            <i class="bi bi-search"></i>
+    <form action="" class="d-flex" role="search" method="post">
+       
         </button>
     </form>
 
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Nº Pedido</th>
-                <th scope="col">Nome</th>
-                 <th scope="col">Item</th>
-                <th scope="col">Valor total</th>
-                <th scope="col">Data do pedido</th>
-                <th scope="col">
-                    <a class="btn btn-success" href="<?= base_url('#'); ?>"> 
-                        Novo
-                        <i class="bi bi-plus-circle"></i>
-                    </a>
-                </th>
+                <th scope="col">Produto</th>
+                <th scope="col">Vezes pedidos</th>
+                <th scope="col">Quantidade vendido</th>
+                 <th scope="col">Valor arrecadado</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
 
             <!-- Aqui vai o laço de repetição -->
-           <?php foreach($resultado as $item): ?>
+           <?php foreach($resultados as $item): ?>
                 <tr>
-                    <th scope="row"><?= $item['venda_id']; ?></th>
-                    <td><?= $item['user']?></td>
-                     <td><?= $item['produto']?></td>
-                    <td><?= $item['venda_valor']?></td>
-                    <td><?= $item['venda_compra']?></td>
-                    <td>
-                        <a class="btn btn-primary" href="<?= base_url('usuarios/edit/'.$item["venda_id"]); ?>">
-                            Editar
-                        </a>
-                        <a class="btn btn-danger" href="<?= base_url('usuarios/delete/'.$item["venda_id"]); ?>">
-                            Excluir
-                        </a>
-                    </td>
+                    <td><?= esc($item['nome_produtos'])?></td>
+                    <td><?= esc($item['vezes']."x")?></td>
+                     <td><?= esc($item['vendas'])?></td>
+                    <td><?= esc('R$ '.$item['preco'])?></td>
                 </tr>
             <?php endforeach; ?>
             

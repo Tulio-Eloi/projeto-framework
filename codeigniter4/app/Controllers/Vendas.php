@@ -2,80 +2,49 @@
 
 namespace App\Controllers;
 
+use App\Models\PedidoItem;
 use App\Models\Produtos;
-use App\Models\ProdutosVendas;
-use App\Models\Usuarios_model;
-use App\Models\Vendas as ModelsVendas;
+
 
 class Vendas extends BaseController
 {
-    private $vendas;
+    
     private $produtos;
-    private $produtosVenda;
-    private $usuarios;
+    private $itensPedidos;
+
 
     public function __construct(){
-        $this->vendas = new ModelsVendas();
         $this->produtos = new Produtos();
-        $this->produtosVenda = new ProdutosVendas();
-        $this->usuarios = new Usuarios_model();
-       // $this->nivel = new Nivel();
-        $data['title'] = 'Vendas';
-        helper('functions');
+        $this->itensPedidos = new PedidoItem();
+        
     }
     public function index()
     {
-        $data['title'] = 'Vendas';
-        $data['vendas_prod'] = $this->produtosVenda->findAll();
-         $data['prod'] = $this->produtos->findAll();
-         $data['vendas'] = $this->vendas->findAll();
-         $data['usuarios'] = $this->usuarios->findAll();
-         $produtoEncontrado = [];
-         $vendaEncontrado = [];
-         $usuarioEncontrado = [];
-        foreach($data['vendas_prod'] as $prod){
-           
-              foreach($data['prod'] as $prods){
-            if($prods->produtos_id == $prod->id_produto){
-                $produtoEncontrado = $prods;
-                break;
-            }
-        }
+        $data['itens'] = $this->itensPedidos->findAll();
+        $data['produtos'] = $this->produtos->findAll();
+        $data['title'] = "Vendas";
+      //  foreach( $data['itens'] as $itens):
 
-        // Venda
-        foreach($data['vendas'] as $vend){
-            if($vend->vendas_id == $prod->Id_vendas){
-                $vendaEncontrado = $vend;
-                break;
-            }
-        }
+        $query = $this->itensPedidos->query('SELECT produto_id, SUM(quantidade) AS quantidade,count(produto_id) AS total FROM pedidos_itens GROUP BY produto_id;'); //use isso para retornar os dados de vendas da tela de itenspedidos
+        foreach($data['produtos'] as $prod):
+            foreach($query->getResultArray() as $result):
+            if($prod->produtos_id == $result['produto_id']):
+                $valor = doubleval($prod->produtos_preco_venda) * doubleval($result['quantidade']);
+                 $resultado[] = [
+                    'nome_produtos' => $prod->produtos_nome,
+                    'vezes' => intval($result['total']),
+                    'vendas' =>  intval($result['quantidade']),
+                    'preco' => $valor
 
-        // Usuário
-        if($vendaEncontrado){
-            foreach($data['usuarios'] as $user){
-                if($user->usuarios_id == $vendaEncontrado->vendas_usuario_id){
-                    $usuarioEncontrado = $user;
-                    break;
-                }
-            }
-        }
-
-        // Se encontrou tudo, adiciona ao resultado
-        if($produtoEncontrado && $vendaEncontrado && $usuarioEncontrado){
-            $resultado[] = [
-                'usuarios_id' => $usuarioEncontrado->usuarios_id,
-                'venda_id'      => $vendaEncontrado->vendas_id,
-                'produto'       => $produtoEncontrado->produtos_nome,
-                'venda_valor'   => $vendaEncontrado->venda_total,
-                'venda_compra'  => $vendaEncontrado->vendas_data_compra,
-                'user'          => $usuarioEncontrado->usuarios_nome
-            ];
-        }
-    }     
-         $data['resultado'] = $resultado;
-
-        return view('vendas/index',$data);
+                 ];
+            endif;
+            endforeach;
+        endforeach;
+        $data['resultados'] = $resultado;
+        return view('/vendas/index',$data);
     }
+    
+
 
     // public function new()
     // {
