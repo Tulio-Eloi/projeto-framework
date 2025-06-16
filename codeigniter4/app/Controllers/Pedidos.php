@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+
 use App\Models\Pedido;
 use App\Models\PedidoItem;
 use App\Models\Cliente;
@@ -67,7 +68,7 @@ class Pedidos extends BaseController
                 'pedido_id' => $pedido_id,
                 'produto_id' => $produto_id,
                 'quantidade' => $quantidades[$key],
-                'preco_venda' => $produto['produtos_preco_venda']
+                'preco_venda' => $produto->produtos_preco_venda
             ]);
         }
 
@@ -126,7 +127,7 @@ class Pedidos extends BaseController
                 'pedido_id' => $pedido_id,
                 'produto_id' => $produto_id,
                 'quantidade' => $quantidades[$key],
-                'preco_venda' => $produto['produtos_preco_venda']
+                'preco_venda' => $produto->produtos_preco_venda
             ]);
         }
 

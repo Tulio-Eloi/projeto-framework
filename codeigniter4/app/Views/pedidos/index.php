@@ -32,7 +32,7 @@
                     <td><?= esc($pedido->nome_cliente) ?></td>
                     <td><?= esc($pedido->fone_cliente) ?></td>
                     <td><?= date('d/m/Y H:i', strtotime($pedido->data_pedido)) ?></td>
-                    <td><?= esc($pedido->status_pedido) ?></td>
+                    <td><?= esc($pedido->status) ?></td>
                     <td>
                         <a class="btn btn-primary" href="<?= base_url('pedidos/edit/'.$pedido->pedido_id) ?>">
                             Editar <i class="bi bi-pencil-square"></i>

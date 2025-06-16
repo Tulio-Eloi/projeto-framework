@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Models;
-
-
+use CodeIgniter\Model;
 
 helper('functions');
 
-class Pedido {
+class Pedido extends Model {
+    protected $table = 'pedidos';
+    protected $primaryKey = 'pedido_id';
+    protected $allowedFields = ['cliente_id', 'endereco_id', 'data_pedido', 'status'];
+    protected $returnType = 'object';
+
     public $pedido_id;
     public $cliente_id;
     public $endereco_id;
@@ -16,9 +20,5 @@ class Pedido {
     
     public $itens = []; 
 
-    public function __construct($dados = []) {
-        foreach ($dados as $chave => $valor) {
-            $this->$chave = $valor;
-        }
-    }
+
 }

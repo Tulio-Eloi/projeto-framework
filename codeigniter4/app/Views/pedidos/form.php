@@ -33,9 +33,9 @@
             <select class="form-select" name="endereco_id" id="endereco_id" required>
                 <option value="">Selecione o endereço</option>
                 <?php foreach($enderecos as $endereco): ?>
-                    <option value="<?= $endereco['id'] ?>"
-                        <?= (isset($pedido->endereco_id) && $pedido->endereco_id == $endereco['id']) ? 'selected' : '' ?>>
-                        <?= $endereco['rua'] ?>, <?= $endereco['numero'] ?> - <?= $endereco['cidade'] ?>
+                    <option value="<?= $endereco['endereco_id'] ?>"
+                        <?= (isset($pedido->endereco_id) && $pedido->endereco_id == $endereco['endereco_id']) ? 'selected' : '' ?>>
+                        <?= $endereco['endereco_rua'] ?>, <?= $endereco['endereco_numero'] ?> - <?= $endereco['endereco_cidade_id'] ?>
                     </option>
                 <?php endforeach; ?>
             </select>
@@ -57,16 +57,16 @@
                                 <select class="form-select" name="produtos[]">
                                     <option value="">Selecione o produto</option>
                                     <?php foreach($produtos as $produto): ?>
-                                        <option value="<?= $produto['produtos_id'] ?>"
-                                            <?= ($item['produto_id'] == $produto['produtos_id']) ? 'selected' : '' ?>>
-                                            <?= $produto['produtos_nome'] ?> - R$ <?= number_format($produto['produtos_preco_venda'], 2, ',', '.') ?>
+                                        <option value="<?= $produto->produtos_id ?>"
+                                            <?= ($item->produto_id == $produto->produtos_id) ? 'selected' : '' ?>>
+                                            <?= $produto->produtos_nome?> - R$ <?= number_format($produto->produtos_preco_venda, 2, ',', '.') ?>
                                         </option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="col">
                                 <input type="number" class="form-control" name="quantidades[]" 
-                                       value="<?= $item['quantidade'] ?>" min="1" required>
+                                       value="<?= $item->quantidade ?>" min="1" required>
                             </div>
                             <div class="col-auto">
                                 <button type="button" class="btn btn-danger btn-remover-produto">Remover</button>
@@ -80,7 +80,7 @@
                                 <option value="">Selecione o produto</option>
                                 <?php foreach($produtos as $produto): ?>
                                     <option value="<?= $produto->produtos_id ?>">
-                                        <?= $produto->produtos_id  ?> - R$ <?= number_format($produto['produtos_preco_venda'], 2, ',', '.') ?>
+                                        <?= $produto->produtos_id  ?> - R$ <?= number_format($produto->produtos_preco_venda, 2, ',', '.') ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
