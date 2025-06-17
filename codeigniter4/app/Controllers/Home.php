@@ -8,6 +8,7 @@ class Home extends BaseController
     {   
         $data['titulo'] = "Home";
         $data['conteudo'] = "Seja bem vindo ao SYS Delivery!";
+        $data['msg'] = '';
         return view('home/index',$data);
     }
 

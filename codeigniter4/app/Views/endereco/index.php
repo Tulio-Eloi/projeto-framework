@@ -91,7 +91,7 @@
 
 
             <?php }else{?>
-                <?php echo "Nenhum endereço cadastrado"?>
+               
 
                 <?php }?>
 

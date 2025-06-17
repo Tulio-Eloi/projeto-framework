@@ -84,6 +84,8 @@ $routes->get('/imgprodutos/delete/(:any)', 'Imgprodutos::delete/$1');
 $routes->get('/vendas', 'Vendas::index');
 $routes->post('/vendas/search', 'Vendas::search');
 
+$routes->get('/entregas', 'Entregador::index');
+
 $routes->get('estoques', 'Estoques::index');
 $routes->get('estoques/edit/(:num)', 'Estoques::edit/$1');
 $routes->post('estoques/update', 'Estoques::update');

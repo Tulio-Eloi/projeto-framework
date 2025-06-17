@@ -8,6 +8,7 @@ use App\Models\PedidoItem;
 use App\Models\Cliente;
 use App\Models\Produtos;
 use App\Models\Endereco;
+use App\Models\Entregador;
 
 helper('functions');
 
@@ -15,15 +16,15 @@ class Pedidos extends BaseController
 {
     public function index()
     {
+         $entregadorModel = new Entregador();
         $db = \Config\Database::connect();
         $builder = $db->table('pedidos');
         $builder->select('pedidos.*, clientes.nome_cliente, clientes.fone_cliente');
         $builder->join('clientes', 'clientes.id_clientes = pedidos.cliente_id');
         $query = $builder->get();
-
+        $data['entregador'] = $entregadorModel->findAll();
         $data['pedidos'] = $query->getResult();
         $data['title'] = 'Pedidos';
-
         return view('pedidos/index', $data);
     }
 
@@ -32,10 +33,12 @@ class Pedidos extends BaseController
         $clientesModel = new Cliente();
         $produtosModel = new Produtos();
         $enderecoModel = new Endereco();
+        $entregadorModel = new Entregador();
 
         $data['clientes'] = $clientesModel->findAll();
         $data['produtos'] = $produtosModel->findAll();
         $data['enderecos'] = $enderecoModel->findAll();
+        $data['entregador'] = $entregadorModel->findAll();
         $data['title'] = 'Novo Pedido';
         $data['form'] = 'criar';
         $data['op'] = 'store';
@@ -53,6 +56,7 @@ class Pedidos extends BaseController
             'endereco_id' => $this->request->getPost('endereco_id'),
             'data_pedido' => date('Y-m-d H:i:s'),
             'status_pedido' => $this->request->getPost('status_pedido'),
+            'entregador_id' => $this->request->getPost('entregador')
         ];
 
         $pedido_id = $pedidoModel->insert($pedidoData);
@@ -71,10 +75,19 @@ class Pedidos extends BaseController
                 'preco_venda' => $produto->produtos_preco_venda
             ]);
         }
-
-        return redirect()->to('/pedidos')->with('msg', \msg('Pedido criado com sucesso!', 'success'));
+        session();
+        if(isset($_SESSION['login'])){
+            $login = $_SESSION['login'];
+            if($login->usuarios_nivel == 1){
+                return redirect()->to('/pedidos')->with('msg', \msg('Pedido criado com sucesso!', 'success'));
+                
+            }else if($login->usuarios_nivel == 3){
+                return redirect()->to('/home')->with('msg', \msg('Pedido criado com sucesso!', 'success'));
+            }else{
+               echo 'erro'; 
+            }
     }
-
+    }
     public function edit($id)
     {
         $pedidoModel = new Pedido();
@@ -82,7 +95,7 @@ class Pedidos extends BaseController
         $clientesModel = new Cliente();
         $produtosModel = new Produtos();
         $enderecoModel = new Endereco();
-
+        $entregadorModel = new Entregador();
         $pedido = $pedidoModel->find($id);
         $pedidoItens = $pedidoItensModel->where('pedido_id', $id)->findAll();
 
@@ -91,6 +104,7 @@ class Pedidos extends BaseController
         $data['clientes'] = $clientesModel->findAll();
         $data['produtos'] = $produtosModel->findAll();
         $data['enderecos'] = $enderecoModel->findAll();
+        $data['entregador'] = $entregadorModel->findAll();
         $data['title'] = 'Editar Pedido';
         $data['form'] = 'editar';
         $data['op'] = 'update';

@@ -3,14 +3,17 @@
 namespace App\Controllers;
 use App\Models\Produtos as Produtos_model;
 use App\Models\Categorias as Categorias_model;
+use App\Models\Cidades;
 
 class Produtos extends BaseController
 {
     private $produtos;
     private $categorias;
+    private $cidade;
     public function __construct(){
         $this->produtos = new Produtos_model();
         $this->categorias = new Categorias_model();
+        $this->cidade = new Cidades();
         $data['title'] = 'Produtos';
         helper('functions');
     }
@@ -28,6 +31,7 @@ class Produtos extends BaseController
         $data['op'] = 'create';
         $data['form'] = 'cadastrar';
         $data['categorias'] = $this->categorias->findAll();
+        
         $data['produtos'] = (object) [
             'produtos_nome'=> '',
             'produtos_descricao'=> '',
@@ -93,6 +97,7 @@ class Produtos extends BaseController
     {
         $data['categorias'] = $this->categorias->findAll();
         $data['produtos'] = $this->produtos->find(['produtos_id' => (int) $id])[0];
+            $data['cidade'] = $this->cidade->find(['produtos_id' => (int) $id])[0];
         $data['title'] = 'Produtos';
         $data['form'] = 'Alterar';
         $data['op'] = 'update';

@@ -97,7 +97,17 @@
 
             <button type="button" class="btn btn-secondary" id="btn-adicionar-produto">Adicionar Produto</button>
         </div>
-
+        <div class="mb-3">
+                <label for="entregador">Entregador</label>
+                <select name="entregador" class="form-control" required>
+                    <?php foreach ($entregador as $e):?>
+                        <option value="<?= esc($e->id_entregador) ?>"
+                            <?= isset($pedido) && $pedido->entregador_id == $e->id_entregador ? 'selected' : '' ?>>
+                            <?= esc($e->nome_entregador) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>                           
         <div class="mb-3">
             <button class="btn btn-success" type="submit">Salvar <i class="bi bi-floppy"></i></button>
         </div>

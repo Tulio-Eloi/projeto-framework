@@ -8,7 +8,7 @@ helper('functions');
 class Pedido extends Model {
     protected $table = 'pedidos';
     protected $primaryKey = 'pedido_id';
-    protected $allowedFields = ['cliente_id', 'endereco_id', 'data_pedido', 'status'];
+    protected $allowedFields = ['cliente_id', 'endereco_id', 'data_pedido', 'status', 'entregador_id'];
     protected $returnType = 'object';
 
     public $pedido_id;
@@ -16,6 +16,7 @@ class Pedido extends Model {
     public $endereco_id;
     public $data_pedido;
     public $status;
+    public $entregador;
 
     
     public $itens = []; 

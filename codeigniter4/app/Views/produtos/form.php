@@ -1,10 +1,10 @@
 <?php
     helper('functions');
     session();
-    // if(isset($_SESSION['login'])){
-    //     $login = $_SESSION['login'];
-    //     print_r($login);
-    //     if($login->usuarios_nivel == 1){
+    if(isset($_SESSION['login'])){
+        $login = $_SESSION['login'];
+        print_r($login);
+        if($login->usuarios_nivel == 1){
     
 ?>
 <?= $this->extend('Templates_admin') ?>
@@ -37,24 +37,7 @@
                 <input type="text" class="form-control" name="produtos_preco_venda" value="<?= moedaReal($produtos->produtos_preco_venda); ?>"  id="produtos_preco_venda">
             </div>
 
-            <div class="mb-3">
-                <label for="produtos_categorias_id" class="form-label"> Categoria </label>
-                <select class="form-control" name="produtos_categorias_id"  id="produtos_categorias_id">
-                    
-                    <?php 
-                    for($i=0; $i < count($cidades);$i++){ 
-                        $ed = 'select';
-                        if($cidades[$i]->cidades['id'] == $produtos->produtos_categorias_id){
-                            $selected = 'selected'; 
-                        }
-                    ?>
-                        <option <?= $selected; ?> value="<?= $cidades[$i]->cidades->id; ?>">
-                            <?= $cidades[$i]->cidades_nome; ?>
-                        </option>
-                    <?php } ?>
-
-                </select>
-            </div> 
+            
 
             <input type="hidden" name="produtos_id" value="<?= $produtos->produtos_id; ?>" >
 
@@ -69,15 +52,15 @@
 <?= $this->endSection() ?>
 
 <?php 
-    //     }else{
+        }else{
 
-    //         $data['msg'] = msg("Sem permissão de acesso!","danger");
-    //         echo view('login',$data);
-    //     }
-    // }else{
+            $data['msg'] = msg("Sem permissão de acesso!","danger");
+            echo view('login',$data);
+        }
+    }else{
 
-    //     $data['msg'] = msg("O usuário não está logado!","danger");
-    //     echo view('login',$data);
-    // }
+        $data['msg'] = msg("O usuário não está logado!","danger");
+        echo view('login',$data);
+    }
 
 ?>
