@@ -1,14 +1,32 @@
 <?php
     helper('functions');
     session();
-    if(isset($_SESSION['login'])){
+    $template = '';
+
+    if (isset($_SESSION['login'])) {
         $login = $_SESSION['login'];
-        print_r($login);
-        if($login->usuarios_nivel == 1){
+        if ($login->usuarios_nivel == 1) {
+            $template = 'Templates_admin';
+        } elseif ($login->usuarios_nivel == 2) {
+            $template = 'Templates_funcionarios';
+        } elseif ($login->usuarios_nivel == 3) {
+            $template = 'Templates_user';
+          }else{
+
+            $data['msg'] = msg("Sem permissão de acesso!","danger");
+            echo view('login',$data);
+        }
+    }else{
+
+        $data['msg'] = msg("O usuário não está logado!","danger");
+        echo view('login',$data);
+    }
+        // se não estiver logado
     
 ?>
-<?= $this->extend('Templates_admin') ?>
+<?= $this->extend($template ) ?>
 <?= $this->section('content') ?>
+
 
 
     <div class="container pt-4 pb-5 bg-light">
@@ -51,16 +69,4 @@
 
 <?= $this->endSection() ?>
 
-<?php 
-        }else{
 
-            $data['msg'] = msg("Sem permissão de acesso!","danger");
-            echo view('login',$data);
-        }
-    }else{
-
-        $data['msg'] = msg("O usuário não está logado!","danger");
-        echo view('login',$data);
-    }
-
-?>

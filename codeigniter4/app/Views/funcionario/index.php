@@ -3,26 +3,24 @@
     session();
     if(isset($_SESSION['login'])){
         $login = $_SESSION['login'];
-        if($login->usuarios_nivel == 3){
+        if($login->usuarios_nivel == 2){
     
 ?>
-<?= $this->extend('Templates_user') ?>
+<?= $this->extend('Templates_funcionarios') ?>
 <?= $this->section('content') ?>
 
 
     <div class="container pt-4 pb-5 bg-light">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Usuário</a></li>
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
-                <span class="breadcrumb-text">Seja bem vindo <?= $login->usuarios_nome ?></span>
+                <li class="breadcrumb-item"><a href="#">Funcionario</a></li>
+
+                <span class="breadcrumb-text"> Seja bem vindo <?= $login->usuarios_nome ?></span>
             </ol>     
         </nav>
         <h2 class="border-bottom border-2 border-primary">
-            Usuário
+            Funcionario
         </h2>
-        <?php if(session()->getFlashdata('msg')) { echo session()->getFlashdata('msg'); } ?>
         <p></p>
 
         <p>

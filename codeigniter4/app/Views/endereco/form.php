@@ -1,5 +1,31 @@
-<?php session()?>
-<?= $this->extend('Templates_admin copy') ?>
+<?php
+    helper('functions');
+    session();
+    $template = '';
+
+    if (isset($_SESSION['login'])) {
+        $login = $_SESSION['login'];
+        if ($login->usuarios_nivel == 1) {
+            $template = 'Templates_admin';
+        } elseif ($login->usuarios_nivel == 2) {
+            $template = 'Templates_funcionarios';
+        } elseif ($login->usuarios_nivel == 3) {
+            $template = 'Templates_user';
+          }else{
+
+            $data['msg'] = msg("Sem permissão de acesso!","danger");
+            echo view('login',$data);
+        }
+    }else{
+
+        $data['msg'] = msg("O usuário não está logado!","danger");
+        echo view('login',$data);
+    }
+        // se não estiver logado
+    
+?>
+
+<?= $this->extend($template) ?>
 <?= $this->section('content') ?>
     <h1><?php echo ucfirst($form). ' '.$titulo ?></h1>
 
@@ -53,4 +79,9 @@
         </div>
 
     </form>
-    <?= $this->endSection('content') ?>
+<?= $this->endSection() ?>
+
+<?php 
+      
+
+?>

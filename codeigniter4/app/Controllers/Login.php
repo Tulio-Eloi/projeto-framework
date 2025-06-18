@@ -43,13 +43,15 @@ class Login extends BaseController
                 ];
                 
                 $this->session->set('login', $infoSession);
-
                 if($this->data['usuarios'][0]->usuarios_nivel == 3){
                     
                     return view('user/index',$this->data);
                 }
                 elseif($this->data['usuarios'][0]->usuarios_nivel == 1){
                     return view('admin/index',$this->data);
+                }elseif($this->data['usuarios'][0]->usuarios_nivel == 2){
+                   
+                    return view('funcionario/index',$this->data);
                 }else{
                     $this->data['msg'] = msg('Houve um problema com o seu acesso. Procure a Gerência de TI!','danger');
                     return view('login',$this->data);

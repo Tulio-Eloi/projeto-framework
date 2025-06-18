@@ -55,7 +55,7 @@ class Pedidos extends BaseController
             'cliente_id' => $this->request->getPost('cliente_id'),
             'endereco_id' => $this->request->getPost('endereco_id'),
             'data_pedido' => date('Y-m-d H:i:s'),
-            'status_pedido' => $this->request->getPost('status_pedido'),
+            'status' => $this->request->getPost('status_pedido'),
             'entregador_id' => $this->request->getPost('entregador')
         ];
 
@@ -78,15 +78,16 @@ class Pedidos extends BaseController
         session();
         if(isset($_SESSION['login'])){
             $login = $_SESSION['login'];
-            if($login->usuarios_nivel == 1){
+            if($login->usuarios_nivel == 1 || $login->usuarios_nivel == 2){
                 return redirect()->to('/pedidos')->with('msg', \msg('Pedido criado com sucesso!', 'success'));
                 
             }else if($login->usuarios_nivel == 3){
-                return redirect()->to('/home')->with('msg', \msg('Pedido criado com sucesso!', 'success'));
+                return redirect()->to('/user/index')->with('msg', \msg('Pedido criado com sucesso!', 'success'));
             }else{
                echo 'erro'; 
             }
     }
+
     }
     public function edit($id)
     {
@@ -122,7 +123,7 @@ class Pedidos extends BaseController
         $pedidoData = [
             'cliente_id' => $this->request->getPost('cliente_id'),
             'endereco_id' => $this->request->getPost('endereco_id'),
-            'status_pedido' => $this->request->getPost('status_pedido'),
+            'status' => $this->request->getPost('status_pedido'),
         ];
 
         $pedidoModel->update($pedido_id, $pedidoData);

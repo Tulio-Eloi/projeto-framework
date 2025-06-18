@@ -1,15 +1,15 @@
-<nav class="navbar navbar-dark bg-dark fixed-top mb-5">
-    <div class="container-fluid">
-
-        <a class="navbar-brand" href="#">
-            <!--Logo do Projeto-->
-            <img src="<?php echo base_url('assets/images/bootstrap-logo.svg') ?>" alt="SysDelivery" width="30"
-                height="24">
-            SysDelivery
-        </a>
-
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+<!-- Abre o menu de navegação -->
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary"
+            data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <!--Logo do Projeto-->
+                    <img src=<?= base_url("assets/images/bootstrap-logo.svg") ?> alt="Bootstrap"
+                        width="30" height="24">
+                    Bootstrap
+                </a>
+                
+   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span> Menu
         </button>
@@ -31,13 +31,7 @@
                         </a>
                     </li>
 
-                    <!-- Link usuários-->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('usuarios') ?>">
-                            <i class="bi bi-person"></i>
-                            Usuários
-                        </a>
-                    </li>
+                   
 
                     <!-- Link Categorias-->
                     <li class="nav-item">
@@ -56,16 +50,8 @@
                     </li>
 
                    
-                    <!-- Link Alterar Senha-->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                            href="<?php echo base_url('usuarios/edit_senha') ?>">
-                            <i class="bi bi-key"></i>
-                            Alterar Senha
-                        </a>
-                    </li>
 
-                    
+                   
 
                     <!-- ------------------------------------------------------------ -->
 
@@ -79,13 +65,7 @@
 
                    
 
-                    <!-- Link Alterar Nível-->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('enderecos') ?>">
-                            <i class="bi bi-house-add"></i>
-                            Endereços
-                        </a>
-                    </li>
+                  
 
                     <!-- Link Alterar Nível-->
                     <li class="nav-item">
@@ -95,7 +75,7 @@
                         </a>
                     </li>
 
-                    
+                   
 
                     <!-- Link Alterar Nível-->
                     <li class="nav-item">

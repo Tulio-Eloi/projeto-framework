@@ -26,7 +26,7 @@ class Endereco extends BaseController
         $data['form'] = 'enderecos';
         //$data['cidade'] = $this->cidades->findAll();
      
-         $data['title'] = 'Categorias';
+         $data['title'] = 'Endereços';
         //$data['endereco'] = $this->endereco->findAll();
   
         $data['endereco'] = $this->endereco->join('cidades', 'endereco_cidade_id = cidades_id')->find();
